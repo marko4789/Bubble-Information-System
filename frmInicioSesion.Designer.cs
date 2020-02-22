@@ -39,7 +39,7 @@
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.Location = new System.Drawing.Point(240, 201);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(231, 201);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(114, 27);
             this.btnIniciarSesion.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             this.labelUsuario.AutoSize = true;
             this.labelUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsuario.Location = new System.Drawing.Point(97, 113);
+            this.labelUsuario.Location = new System.Drawing.Point(88, 113);
             this.labelUsuario.Name = "labelUsuario";
             this.labelUsuario.Size = new System.Drawing.Size(68, 21);
             this.labelUsuario.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             this.labelContrasena.AutoSize = true;
             this.labelContrasena.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelContrasena.Location = new System.Drawing.Point(97, 160);
+            this.labelContrasena.Location = new System.Drawing.Point(88, 160);
             this.labelContrasena.Name = "labelContrasena";
             this.labelContrasena.Size = new System.Drawing.Size(97, 21);
             this.labelContrasena.TabIndex = 2;
@@ -69,23 +69,26 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(242, 116);
+            this.txtUsuario.Location = new System.Drawing.Point(233, 116);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(112, 20);
             this.txtUsuario.TabIndex = 3;
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(242, 163);
+            this.txtContrasena.Location = new System.Drawing.Point(233, 163);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(112, 20);
             this.txtContrasena.TabIndex = 4;
+            this.txtContrasena.Tag = "";
+            this.txtContrasena.UseSystemPasswordChar = true;
             // 
             // lbTitulo
             // 
             this.lbTitulo.AutoSize = true;
             this.lbTitulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitulo.Location = new System.Drawing.Point(110, 27);
+            this.lbTitulo.Location = new System.Drawing.Point(101, 27);
             this.lbTitulo.Name = "lbTitulo";
             this.lbTitulo.Size = new System.Drawing.Size(226, 36);
             this.lbTitulo.TabIndex = 5;
