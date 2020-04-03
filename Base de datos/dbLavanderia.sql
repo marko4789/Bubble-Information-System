@@ -2,7 +2,8 @@
 SQLyog Ultimate v11.11 (64 bit)
 MySQL - 5.5.5-10.1.30-MariaDB : Database - dblavanderia
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -53,7 +54,7 @@ CREATE TABLE `detalleservicio` (
 
 /*Data for the table `detalleservicio` */
 
-INSERT  INTO `detalleservicio`(`numDetalleSer`,`cantidad`,`totalPagar`,`numServicio`, `numVentaServicio`) VALUES (1,1,16.5,1, 1),(2,3,25.5,2, 2);
+
 
 /*Table structure for table `empleados` */
 
@@ -72,7 +73,7 @@ CREATE TABLE `empleados` (
 
 /*Data for the table `empleados` */
 
-INSERT  INTO `empleados`(`numEmpleado`,`nombre`,`apellidoPaterno`, `apellidoMaterno`,`telefono`,`direccion`, `status`) VALUES (1,'Juana Lacu','Bana', 'Carrillo','9852710','Av. Insurgentes #563', 1),(2,'Elvio','Lando', 'Ando','9802333','Av. Colosio #8561', 1),(3,'Alma Marcera','Fuerte', 'Rico','9551536',NULL, 1);
+INSERT  INTO `empleados`(`numEmpleado`,`nombre`,`apellidoPaterno`, `apellidoMaterno`,`telefono`,`direccion`, `status`) VALUES (1,'Juana Lacu','Bana', 'Carrillo','9852710','Av. Insurgentes #563', 1);
 
 /*Table structure for table `servicios` */
 
@@ -89,7 +90,7 @@ CREATE TABLE `servicios` (
 
 /*Data for the table `servicios` */
 
-INSERT  INTO `servicios`(`numServicio`,`nombre`,`formaCobro`,`precio`, `status`) VALUES (1,'Lavado','kilogramo',16.5, 1),(2,'Planchado','pieza',8.5, 1),(3,'Tintorería','pieza',30, 1);
+
 
 /*Table structure for table `usuario` */
 
@@ -109,7 +110,7 @@ CREATE TABLE `usuario` (
 
 /*Data for the table `usuario` */
 
-INSERT  INTO `usuario`(`numUsuario`,`nombreUsuario`,`contraseña`,`tipoUsuario`, `status`,`numEmpleado`) VALUES (1,'AlamaMar','elsapo','Usuario',0,3),(2,'ElvioLand','tutia','Administrador',0,2),(3,'Juanita19','amocuba','Usuario',0,1);
+INSERT  INTO `usuario`(`numUsuario`,`nombreUsuario`,`contraseña`,`tipoUsuario`, `status`,`numEmpleado`) VALUES (3,'Juanita19','amocuba','Usuario',0,1);
 
 /*Table structure for table `ventaservicio` */
 
@@ -131,7 +132,7 @@ CREATE TABLE `ventaservicio` (
 
 /*Data for the table `ventaservicio` */
 
-INSERT  INTO `ventaservicio`(`numVentaServicio`,`fecha`,`importe`,`status`,`numUsuario`,`numCliente`) VALUES (1,'2019-12-04',102,0,2,2),(2,NULL,NULL,NULL,NULL,NULL);
+
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
