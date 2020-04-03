@@ -74,8 +74,8 @@ namespace Bubble_Information_System
                     this.Hide();
                     if (dt.Rows[0][1].ToString() == "Administrador")
                     {
-                        //frmMenu me = new frmMenu();
-                        //me.Show();
+                        MenuAd me = new MenuAd();
+                        me.Show();
                         MessageBox.Show("Inicio de sesión como un Administrador", "Bubble Information System");
                     }
                     else if (dt.Rows[0][1].ToString() == "Usuario")

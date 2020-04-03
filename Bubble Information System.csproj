@@ -48,13 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Empleados.cs">
+    <Compile Include="Empleados.cs">
       <SubType>Form</SubType>
-      <Link>Empleados.cs</Link>
     </Compile>
-    <Compile Include="..\..\Empleados.Designer.cs">
+    <Compile Include="Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
-      <Link>Empleados.Designer.cs</Link>
     </Compile>
     <Compile Include="frmInicioSesion.cs">
       <SubType>Form</SubType>
@@ -70,10 +68,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="..\..\Empleados.resx">
-      <DependentUpon>Empleados.cs</DependentUpon>
-      <Link>Empleados.resx</Link>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +96,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imágenes\Adeudos.png" />
+    <Content Include="Imágenes\Administrador.png" />
+    <Content Include="Imágenes\Clientes.png" />
+    <Content Include="Imágenes\Corte de caja.png" />
+    <Content Include="Imágenes\Login.png" />
+    <Content Include="Imágenes\Logo.png" />
+    <Content Include="Imágenes\Usuario.png" />
+    <Content Include="Imágenes\Ventas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
