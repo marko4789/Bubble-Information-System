@@ -66,6 +66,12 @@
     <Compile Include="MenuAd.Designer.cs">
       <DependentUpon>MenuAd.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuUs.Designer.cs">
+      <DependentUpon>MenuUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmInicioSesion.resx">
@@ -73,6 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuAd.resx">
       <DependentUpon>MenuAd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUs.resx">
+      <DependentUpon>MenuUs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,6 +115,11 @@
     <Content Include="Imágenes\Logo.png" />
     <Content Include="Imágenes\Usuario.png" />
     <Content Include="Imágenes\Ventas.png" />
+    <None Include="Resources\Usuario.png" />
+    <None Include="Resources\icons8-caja-registradora-48.png" />
+    <None Include="Resources\icons8-historial-de-pagos-48.png" />
+    <None Include="Resources\icons8-grupo-de-usuario-48.png" />
+    <None Include="Resources\icons8-checkout-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

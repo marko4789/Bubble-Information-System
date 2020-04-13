@@ -13,9 +13,7 @@ C:\Users\marko\source\repos\Bubble Information System\obj\Debug\Bubble Informati
 C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\bin\Debug\Bubble Information System.exe.config
 C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\bin\Debug\Bubble Information System.exe
 C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\bin\Debug\Bubble Information System.pdb
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble_Information_System.Empleados.resources
 C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble_Information_System.FrmInicioSesion.resources
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble_Information_System.Menu.resources
 C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble_Information_System.Properties.Resources.resources
 C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.GenerateResource.cache
 C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.CopyComplete
@@ -35,3 +33,6 @@ C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Informati
 C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.exe
 C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.pdb
 C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuAd.resources
+C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\bin\Debug\MySql.Data.xml
+C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuAd.resources
+C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuUs.resources
