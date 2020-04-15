@@ -33,7 +33,7 @@ CREATE TABLE `clientes` (
 
 /*Data for the table `clientes` */
 
-INSERT  INTO `clientes`(`numCliente`,`nombre`,`apellidoPaterno`, `apellidoMaterno`,`telefono`, `status`) VALUES (1,'Ana Gabriela','Pérez', 'Tiznado','6692456878', 1),(2,'Alan Josué','Barraza', 'Osuna','6697386541', 0),(3,'Gloria','Trevi', 'Moteros','6698784562', 1);
+INSERT  INTO `clientes`(`numCliente`,`nombre`,`apellidoPaterno`, `apellidoMaterno`,`telefono`, `status`) VALUES (1,'Ana Gabriela','Pérez', 'Tiznado','6692456878', 1),(2,'Alan Josué','Barraza', 'Osuna','6697386541', 0),(3,'Gloria','Trevi', 'Moteros','6698784562', 1),(4,'Juan Carlos','Rodríguez', 'Escalante','6691363637', 0),(5,'Rosa María','Morales', 'Rubio','6672463693', 1),(6,'Xiomara','Almonte', 'Ruíz','6697241137', 0),(7,'José Rodrigo','Martinez', 'Romero','6690327412', 1),(8,'Manuel Enrique','Medina', 'Niebla','6691363637', 0),(9,'Alma Sofia','Garcia', 'Acosta','6693783401', 1),(10,'Rosario Montserrat','Valdovinos', 'Zepeda','6691162966', 1);
 
 /*Table structure for table `detalleservicio` */
 
@@ -73,7 +73,7 @@ CREATE TABLE `empleados` (
 
 /*Data for the table `empleados` */
 
-INSERT  INTO `empleados`(`numEmpleado`,`nombre`,`apellidoPaterno`, `apellidoMaterno`,`telefono`,`direccion`, `status`) VALUES (1,'Juana Lacu','Bana', 'Carrillo','9852710','Av. Insurgentes #563', 1);
+INSERT  INTO `empleados`(`numEmpleado`,`nombre`,`apellidoPaterno`, `apellidoMaterno`,`telefono`,`direccion`, `status`) VALUES (1,'Juana Lacu','Bana', 'Carrillo','9852710','Av. Insurgentes #563', 1),(2,'José María','Montemayor', 'Amaya','6697135790','Cid Marina #622', 1),(3,'Liliana Anel','Ortega', 'Valenzuela','6691082977','Av. Rafael Buelna #49', 1),(4,'Dimitrio Jassiel','Montemayor', 'Amaya','6691087636','Pradera Dorada #321', 1),(5,'Diana Paola','Lascurain', 'Vizcarra','6697196361','Calle Simon Bolivar #622', 1);
 
 /*Table structure for table `servicios` */
 
@@ -110,7 +110,7 @@ CREATE TABLE `usuario` (
 
 /*Data for the table `usuario` */
 
-INSERT  INTO `usuario`(`numUsuario`,`nombreUsuario`,`contraseña`,`tipoUsuario`, `status`,`numEmpleado`) VALUES (3,'Juanita19','amocuba','Usuario',0,1);
+INSERT  INTO `usuario`(`numUsuario`,`nombreUsuario`,`contraseña`,`tipoUsuario`, `status`,`numEmpleado`) VALUES (3,'Juanita19','amocuba','Usuario',0,1),(4,'chemaMA','jomamoam123','Administrador',0,2),(5,'lilianelOV','lianorva456','Usuario',0,3),(6,'dimijassMA','dijamoam789','Administrador',0,4),(7,'dianpaLC','dipalaca012','Usuario',0,5);
 
 /*Table structure for table `ventaservicio` */
 
