@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace Bubble_Information_System
 {
-    public partial class MenuAd : Form
+    public partial class MenuUs : Form
     {
-
-        
-        public MenuAd()
+        public MenuUs()
         {
             InitializeComponent();
         }
-
-        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (Empleados ventanaEmpleados = new Empleados())
-                ventanaEmpleados.ShowDialog();
-
-        }
-
-      
     }
 }
