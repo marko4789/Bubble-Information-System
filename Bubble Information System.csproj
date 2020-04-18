@@ -80,6 +80,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +127,7 @@
     <Content Include="Imágenes\Logo.png" />
     <Content Include="Imágenes\Usuario.png" />
     <Content Include="Imágenes\Ventas.png" />
+    <None Include="Resources\icons8-añadir-48.png" />
     <None Include="Resources\Usuario.png" />
     <None Include="Resources\icons8-caja-registradora-48.png" />
     <None Include="Resources\icons8-historial-de-pagos-48.png" />

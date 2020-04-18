@@ -98,31 +98,32 @@
             // serviciosToolStripMenuItem
             // 
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(97, 32);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(89, 32);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(80, 32);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
             this.ventasToolStripMenuItem.Text = "Ventas";
+            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
             // adeudosToolStripMenuItem
             // 
             this.adeudosToolStripMenuItem.Name = "adeudosToolStripMenuItem";
-            this.adeudosToolStripMenuItem.Size = new System.Drawing.Size(100, 32);
+            this.adeudosToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
             this.adeudosToolStripMenuItem.Text = "Adeudos";
             // 
             // corteToolStripMenuItem
             // 
             this.corteToolStripMenuItem.Name = "corteToolStripMenuItem";
-            this.corteToolStripMenuItem.Size = new System.Drawing.Size(131, 32);
+            this.corteToolStripMenuItem.Size = new System.Drawing.Size(131, 29);
             this.corteToolStripMenuItem.Text = "Corte de caja";
             // 
             // pictureBox2

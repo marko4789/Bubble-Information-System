@@ -26,6 +26,10 @@ namespace Bubble_Information_System
 
         }
 
-      
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (frmVentas ventanaVentas = new frmVentas())
+                ventanaVentas.ShowDialog();
+        }
     }
 }
