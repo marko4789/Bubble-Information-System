@@ -43,10 +43,30 @@
             this.textApeM = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textDir = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoPaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoMaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.numEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoPaternoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoMaternoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.empleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dblavanderiaDataSet = new Bubble_Information_System.dblavanderiaDataSet();
+            this.empleadosTableAdapter = new Bubble_Information_System.dblavanderiaDataSetTableAdapters.empleadosTableAdapter();
+            this.btn_actualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblavanderiaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTitulo
@@ -178,16 +198,47 @@
             this.textDir.TabIndex = 14;
             this.textDir.TextChanged += new System.EventHandler(this.textDir_TextChanged);
             // 
-            // dataGridView1
+            // Column1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(298, 558);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(534, 216);
-            this.dataGridView1.TabIndex = 16;
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // apellidoPaternoDataGridViewTextBoxColumn
+            // 
+            this.apellidoPaternoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.apellidoPaternoDataGridViewTextBoxColumn.Name = "apellidoPaternoDataGridViewTextBoxColumn";
+            this.apellidoPaternoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // apellidoMaternoDataGridViewTextBoxColumn
+            // 
+            this.apellidoMaternoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.apellidoMaternoDataGridViewTextBoxColumn.Name = "apellidoMaternoDataGridViewTextBoxColumn";
+            this.apellidoMaternoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // status
+            // 
+            this.status.MinimumWidth = 8;
+            this.status.Name = "status";
+            this.status.Width = 150;
             // 
             // btnAgregar
             // 
@@ -201,14 +252,117 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numEmpleadoDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn1,
+            this.apellidoPaternoDataGridViewTextBoxColumn1,
+            this.apellidoMaternoDataGridViewTextBoxColumn1,
+            this.telefonoDataGridViewTextBoxColumn1,
+            this.direccionDataGridViewTextBoxColumn1,
+            this.statusDataGridViewCheckBoxColumn});
+            this.dataGridView1.DataSource = this.empleadosBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(401, 396);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(547, 213);
+            this.dataGridView1.TabIndex = 18;
+            // 
+            // numEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.numEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "numEmpleado";
+            this.numEmpleadoDataGridViewTextBoxColumn.HeaderText = "numEmpleado";
+            this.numEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.numEmpleadoDataGridViewTextBoxColumn.Name = "numEmpleadoDataGridViewTextBoxColumn";
+            this.numEmpleadoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            this.nombreDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // apellidoPaternoDataGridViewTextBoxColumn1
+            // 
+            this.apellidoPaternoDataGridViewTextBoxColumn1.DataPropertyName = "apellidoPaterno";
+            this.apellidoPaternoDataGridViewTextBoxColumn1.HeaderText = "apellidoPaterno";
+            this.apellidoPaternoDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.apellidoPaternoDataGridViewTextBoxColumn1.Name = "apellidoPaternoDataGridViewTextBoxColumn1";
+            this.apellidoPaternoDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // apellidoMaternoDataGridViewTextBoxColumn1
+            // 
+            this.apellidoMaternoDataGridViewTextBoxColumn1.DataPropertyName = "apellidoMaterno";
+            this.apellidoMaternoDataGridViewTextBoxColumn1.HeaderText = "apellidoMaterno";
+            this.apellidoMaternoDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.apellidoMaternoDataGridViewTextBoxColumn1.Name = "apellidoMaternoDataGridViewTextBoxColumn1";
+            this.apellidoMaternoDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // telefonoDataGridViewTextBoxColumn1
+            // 
+            this.telefonoDataGridViewTextBoxColumn1.DataPropertyName = "telefono";
+            this.telefonoDataGridViewTextBoxColumn1.HeaderText = "telefono";
+            this.telefonoDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.telefonoDataGridViewTextBoxColumn1.Name = "telefonoDataGridViewTextBoxColumn1";
+            this.telefonoDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // direccionDataGridViewTextBoxColumn1
+            // 
+            this.direccionDataGridViewTextBoxColumn1.DataPropertyName = "direccion";
+            this.direccionDataGridViewTextBoxColumn1.HeaderText = "direccion";
+            this.direccionDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.direccionDataGridViewTextBoxColumn1.Name = "direccionDataGridViewTextBoxColumn1";
+            this.direccionDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // statusDataGridViewCheckBoxColumn
+            // 
+            this.statusDataGridViewCheckBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewCheckBoxColumn.HeaderText = "status";
+            this.statusDataGridViewCheckBoxColumn.MinimumWidth = 8;
+            this.statusDataGridViewCheckBoxColumn.Name = "statusDataGridViewCheckBoxColumn";
+            this.statusDataGridViewCheckBoxColumn.Width = 150;
+            // 
+            // empleadosBindingSource
+            // 
+            this.empleadosBindingSource.DataMember = "empleados";
+            this.empleadosBindingSource.DataSource = this.dblavanderiaDataSet;
+            // 
+            // dblavanderiaDataSet
+            // 
+            this.dblavanderiaDataSet.DataSetName = "dblavanderiaDataSet";
+            this.dblavanderiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // empleadosTableAdapter
+            // 
+            this.empleadosTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_actualizar
+            // 
+            this.btn_actualizar.Location = new System.Drawing.Point(31, 405);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(102, 55);
+            this.btn_actualizar.TabIndex = 19;
+            this.btn_actualizar.Text = "Actualizar";
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 783);
-            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btn_actualizar);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.textDir);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textApeM);
@@ -228,6 +382,8 @@
             this.Load += new System.EventHandler(this.Empleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblavanderiaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,7 +396,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textDir;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textApeM;
@@ -250,5 +405,24 @@
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.TextBox textNumE;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoPaternoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoMaternoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn status;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private dblavanderiaDataSet dblavanderiaDataSet;
+        private System.Windows.Forms.BindingSource empleadosBindingSource;
+        private dblavanderiaDataSetTableAdapters.empleadosTableAdapter empleadosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numEmpleadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoPaternoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoMaternoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn statusDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button btn_actualizar;
     }
 }

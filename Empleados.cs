@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using MySql.Data.Types;
 
 namespace Bubble_Information_System
 {
@@ -17,8 +19,15 @@ namespace Bubble_Information_System
             InitializeComponent();
         }
 
+        
+      
+
+
         private void Empleados_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dblavanderiaDataSet.empleados' Puede moverla o quitarla según sea necesario.
+            this.empleadosTableAdapter.Fill(this.dblavanderiaDataSet.empleados);
+           
             btnAgregar.Enabled = false; 
         }
         
@@ -205,6 +214,37 @@ namespace Bubble_Information_System
         private void textDir_TextChanged(object sender, EventArgs e)
         {
             controlDir();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            String consulta = "INSERT INTO empleados (numEmpleado, nombre, apellidoPaterno, apellidoMaterno,telefono, direccion) VALUES('" + this.textNumE.Text + "','" + this.textNombre.Text + "','" + this.textApeP.Text + "','" + this.textApeM.Text + "','" + this.textTelefono.Text + "','" + this.textDir.Text + "');";
+            MySqlConnection conexion = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=;");
+            MySqlCommand agregar = new MySqlCommand(consulta, conexion);
+            MySqlDataReader leer;
+            try
+            {
+                conexion.Open();
+                leer = agregar.ExecuteReader();
+                MessageBox.Show("Guardado");
+                while (leer.Read())
+                {
+
+                }
+            }
+
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            this.empleadosTableAdapter.Fill(this.dblavanderiaDataSet.empleados);
         }
     }
 }
