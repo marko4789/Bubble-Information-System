@@ -74,15 +74,13 @@ namespace Bubble_Information_System
                     this.Hide();
                     if (dt.Rows[0][1].ToString() == "Administrador")
                     {
-                        MenuAd me = new MenuAd();
-                        me.Show();
-                        MessageBox.Show("Inicio de sesión como un Administrador", "Bubble Information System");
+                        MenuAd meA = new MenuAd();
+                        meA.Show();
                     }
                     else if (dt.Rows[0][1].ToString() == "Usuario")
                     {
-                        // frmMenuUsu meu = new frmMenuUsu();
-                        //meu.Show();
-                        MessageBox.Show("Inicio de sesión como un Usuario", "Bubble Information System");
+                        MenuAd meU = new MenuAd();
+                        meU.Show();
                     }
                 }
                 else
@@ -100,9 +98,54 @@ namespace Bubble_Information_System
             }
         }
 
+        private void controlUsuario()
+        {
+            if (txtUsuario.Text.Trim() != string.Empty && txtContrasena.Text.Trim() != string.Empty)
+            {
+                btnIniciarSesion.Enabled = true;
 
+            }
 
+            if (txtUsuario.Text.Trim() != string.Empty)
+            {
+                errorProvider1.SetError(txtUsuario, "");
+            }
+            else
+            {
+                errorProvider1.SetError(txtUsuario, "Debe introducir el usuario");
+                btnIniciarSesion.Enabled = false;
+                txtUsuario.Focus();
+            }
+        }
 
+        private void controlContrasena()
+        {
+            if (txtUsuario.Text.Trim() != string.Empty && txtContrasena.Text.Trim() != string.Empty)
+            {
+                btnIniciarSesion.Enabled = true;
 
+            }
+
+            if (txtContrasena.Text.Trim() != string.Empty)
+            {
+                errorProvider1.SetError(txtContrasena, "");
+            }
+            else
+            {
+                errorProvider1.SetError(txtContrasena, "Debe introducir el usuario");
+                btnIniciarSesion.Enabled = false;
+                txtUsuario.Focus();
+            }
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            controlUsuario();
+        }
+
+        private void txtContrasena_TextChanged(object sender, EventArgs e)
+        {
+            controlContrasena();
+        }
     }
 }
