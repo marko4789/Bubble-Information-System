@@ -14,6 +14,10 @@ namespace Bubble_Information_System
 {
     public partial class Empleados : Form
     {
+        MySqlConnection conexion = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=;");
+        
+
+     
         public Empleados()
         {
             InitializeComponent();
@@ -21,13 +25,16 @@ namespace Bubble_Information_System
 
         
       
-
+      
 
         private void Empleados_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dblavanderiaDataSet.empleados' Puede moverla o quitarla según sea necesario.
-            this.empleadosTableAdapter.Fill(this.dblavanderiaDataSet.empleados);
-           
+            string filtrar = "select * from empleados where status=1";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(filtrar, conexion);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dataGridView1.DataSource = table;
+
             btnAgregar.Enabled = false; 
         }
         
@@ -218,7 +225,7 @@ namespace Bubble_Information_System
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            String consulta = "INSERT INTO empleados (numEmpleado, nombre, apellidoPaterno, apellidoMaterno,telefono, direccion) VALUES('" + this.textNumE.Text + "','" + this.textNombre.Text + "','" + this.textApeP.Text + "','" + this.textApeM.Text + "','" + this.textTelefono.Text + "','" + this.textDir.Text + "');";
+            String consulta = "INSERT INTO empleados (numEmpleado, nombre, apellidoPaterno, apellidoMaterno,telefono, direccion, status) VALUES('" + this.textNumE.Text + "','" + this.textNombre.Text + "','" + this.textApeP.Text + "','" + this.textApeM.Text + "','" + this.textTelefono.Text + "','" + this.textDir.Text + "','" + 1 + "'); ";
             MySqlConnection conexion = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=;");
             MySqlCommand agregar = new MySqlCommand(consulta, conexion);
             MySqlDataReader leer;
@@ -244,7 +251,25 @@ namespace Bubble_Information_System
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            this.empleadosTableAdapter.Fill(this.dblavanderiaDataSet.empleados);
+            string filtrar = "select * from empleados where status=1";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(filtrar, conexion);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dataGridView1.DataSource = table;
+        }
+
+        public void buscar(string abuscar)
+        {
+            string buscar = "select * from empleados where status=1 and CONCAT(nombre,apellidoPaterno,apellidoMaterno)like '%" + abuscar + "%'";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(buscar, conexion);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dataGridView1.DataSource = table;
+        }
+
+        private void textbusqueda_TextChanged(object sender, EventArgs e)
+        {
+            buscar(textbusqueda.Text);
         }
     }
 }

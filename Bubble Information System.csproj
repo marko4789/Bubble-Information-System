@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dblavanderiaDataSet.cs">
+      <DependentUpon>dblavanderiaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dblavanderiaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

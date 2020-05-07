@@ -22,5 +22,11 @@ namespace Bubble_Information_System
             using (frmVentas ventanaVentas = new frmVentas())
                 ventanaVentas.ShowDialog();
         }
+
+        private void btn_Venta_Click(object sender, EventArgs e)
+        {
+            using (frmVentas ventanaVentas = new frmVentas())
+                ventanaVentas.ShowDialog();
+        }
     }
 }

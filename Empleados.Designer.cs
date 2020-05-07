@@ -52,17 +52,17 @@
             this.status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.empleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dblavanderiaDataSet = new Bubble_Information_System.dblavanderiaDataSet();
+            this.empleadosTableAdapter = new Bubble_Information_System.dblavanderiaDataSetTableAdapters.empleadosTableAdapter();
+            this.btn_actualizar = new System.Windows.Forms.Button();
             this.numEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoPaternoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoMaternoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.empleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dblavanderiaDataSet = new Bubble_Information_System.dblavanderiaDataSet();
-            this.empleadosTableAdapter = new Bubble_Information_System.dblavanderiaDataSetTableAdapters.empleadosTableAdapter();
-            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.textbusqueda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).BeginInit();
@@ -265,15 +265,38 @@
             this.apellidoPaternoDataGridViewTextBoxColumn1,
             this.apellidoMaternoDataGridViewTextBoxColumn1,
             this.telefonoDataGridViewTextBoxColumn1,
-            this.direccionDataGridViewTextBoxColumn1,
-            this.statusDataGridViewCheckBoxColumn});
+            this.direccionDataGridViewTextBoxColumn1});
             this.dataGridView1.DataSource = this.empleadosBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(401, 396);
+            this.dataGridView1.Location = new System.Drawing.Point(279, 531);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(547, 213);
+            this.dataGridView1.Size = new System.Drawing.Size(662, 240);
             this.dataGridView1.TabIndex = 18;
+            // 
+            // empleadosBindingSource
+            // 
+            this.empleadosBindingSource.DataMember = "empleados";
+            this.empleadosBindingSource.DataSource = this.dblavanderiaDataSet;
+            // 
+            // dblavanderiaDataSet
+            // 
+            this.dblavanderiaDataSet.DataSetName = "dblavanderiaDataSet";
+            this.dblavanderiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // empleadosTableAdapter
+            // 
+            this.empleadosTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_actualizar
+            // 
+            this.btn_actualizar.Location = new System.Drawing.Point(12, 613);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(102, 55);
+            this.btn_actualizar.TabIndex = 19;
+            this.btn_actualizar.Text = "Actualizar";
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // numEmpleadoDataGridViewTextBoxColumn
             // 
@@ -323,43 +346,20 @@
             this.direccionDataGridViewTextBoxColumn1.Name = "direccionDataGridViewTextBoxColumn1";
             this.direccionDataGridViewTextBoxColumn1.Width = 150;
             // 
-            // statusDataGridViewCheckBoxColumn
+            // textbusqueda
             // 
-            this.statusDataGridViewCheckBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewCheckBoxColumn.HeaderText = "status";
-            this.statusDataGridViewCheckBoxColumn.MinimumWidth = 8;
-            this.statusDataGridViewCheckBoxColumn.Name = "statusDataGridViewCheckBoxColumn";
-            this.statusDataGridViewCheckBoxColumn.Width = 150;
-            // 
-            // empleadosBindingSource
-            // 
-            this.empleadosBindingSource.DataMember = "empleados";
-            this.empleadosBindingSource.DataSource = this.dblavanderiaDataSet;
-            // 
-            // dblavanderiaDataSet
-            // 
-            this.dblavanderiaDataSet.DataSetName = "dblavanderiaDataSet";
-            this.dblavanderiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // empleadosTableAdapter
-            // 
-            this.empleadosTableAdapter.ClearBeforeFill = true;
-            // 
-            // btn_actualizar
-            // 
-            this.btn_actualizar.Location = new System.Drawing.Point(31, 405);
-            this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(102, 55);
-            this.btn_actualizar.TabIndex = 19;
-            this.btn_actualizar.Text = "Actualizar";
-            this.btn_actualizar.UseVisualStyleBackColor = true;
-            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
+            this.textbusqueda.Location = new System.Drawing.Point(13, 464);
+            this.textbusqueda.Name = "textbusqueda";
+            this.textbusqueda.Size = new System.Drawing.Size(457, 26);
+            this.textbusqueda.TabIndex = 20;
+            this.textbusqueda.TextChanged += new System.EventHandler(this.textbusqueda_TextChanged);
             // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 783);
+            this.Controls.Add(this.textbusqueda);
             this.Controls.Add(this.btn_actualizar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAgregar);
@@ -416,13 +416,13 @@
         private dblavanderiaDataSet dblavanderiaDataSet;
         private System.Windows.Forms.BindingSource empleadosBindingSource;
         private dblavanderiaDataSetTableAdapters.empleadosTableAdapter empleadosTableAdapter;
+        private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.DataGridViewTextBoxColumn numEmpleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoPaternoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoMaternoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn statusDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.Button btn_actualizar;
+        private System.Windows.Forms.TextBox textbusqueda;
     }
 }

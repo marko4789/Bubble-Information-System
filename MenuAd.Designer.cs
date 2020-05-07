@@ -202,6 +202,7 @@
             this.btn_Venta.Text = "Venta de Servicios";
             this.btn_Venta.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Venta.UseVisualStyleBackColor = true;
+            this.btn_Venta.Click += new System.EventHandler(this.btn_Venta_Click);
             // 
             // pictureBox2
             // 
