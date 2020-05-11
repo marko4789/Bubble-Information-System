@@ -62,7 +62,7 @@ namespace Bubble_Information_System
             try
             {
                 conexionDB.Open();
-                sqlComando = new MySqlCommand("select nombreUsuario, tipoUsuario from usuario where nombreUsuario =?nombreUsuario and contraseña =?contraseña and status = 0 ", conexionDB);
+                sqlComando = new MySqlCommand("select nombreUsuario, tipoUsuario, numEmpleado from usuario where nombreUsuario =?nombreUsuario and contraseña =?contraseña and status = 0 ", conexionDB);
                 sqlComando.Parameters.AddWithValue("nombreUsuario", nombreUsuario);
                 sqlComando.Parameters.AddWithValue("contraseña", contraseña);
                 
@@ -72,14 +72,17 @@ namespace Bubble_Information_System
                 if (dt.Rows.Count == 1)
                 {
                     this.Hide();
+
+                    
+
                     if (dt.Rows[0][1].ToString() == "Administrador")
                     {
-                        MenuAd meA = new MenuAd();
+                        MenuAd meA = new MenuAd(Convert.ToInt32(dt.Rows[0][2]));
                         meA.Show();
                     }
                     else if (dt.Rows[0][1].ToString() == "Usuario")
                     {
-                        MenuAd meU = new MenuAd();
+                        MenuUs meU = new MenuUs(Convert.ToInt32(dt.Rows[0][2]));
                         meU.Show();
                     }
                 }
@@ -146,6 +149,19 @@ namespace Bubble_Information_System
         private void txtContrasena_TextChanged(object sender, EventArgs e)
         {
             controlContrasena();
+        }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                btnIniciarSesion_Click(null, null);
+            }
+        }
+
+        private void FrmInicioSesion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
