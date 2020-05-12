@@ -10,9 +10,8 @@
 
 namespace Bubble_Information_System.Properties {
     using System;
-    using System.Drawing;
-
-
+    
+    
     /// <summary>
     ///   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
     /// </summary>
@@ -24,9 +23,7 @@ namespace Bubble_Information_System.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        internal static Image refreshwebpage_99690;
-        internal static Image remove_circle_1_icon_icons_com_48486;
-        internal static Image search_119641;
+        
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -34,9 +31,7 @@ namespace Bubble_Information_System.Properties {
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-
-        public static Image Polygon { get; internal set; }
-
+        
         /// <summary>
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
@@ -224,6 +219,10 @@ namespace Bubble_Information_System.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Imprimir {
             get {
                 object obj = ResourceManager.GetObject("Imprimir", resourceCulture);
@@ -267,6 +266,46 @@ namespace Bubble_Information_System.Properties {
         internal static System.Drawing.Bitmap Logo1 {
             get {
                 object obj = ResourceManager.GetObject("Logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Polygon {
+            get {
+                object obj = ResourceManager.GetObject("Polygon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reload_webpage_icon_icons_com_53905 {
+            get {
+                object obj = ResourceManager.GetObject("reload-webpage_icon-icons.com_53905", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap remove_circle_1_icon_icons_com_48486 {
+            get {
+                object obj = ResourceManager.GetObject("remove-circle-1_icon-icons.com_48486", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_119641 {
+            get {
+                object obj = ResourceManager.GetObject("search_119641", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

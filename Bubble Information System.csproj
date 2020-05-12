@@ -68,6 +68,12 @@
     <Compile Include="frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServicios.Designer.cs">
+      <DependentUpon>frmServicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmServicios.resx">
+      <DependentUpon>frmServicios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +115,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="dblavanderiaDataSet.xsc">
       <DependentUpon>dblavanderiaDataSet.xsd</DependentUpon>
@@ -122,7 +132,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -143,6 +157,10 @@
     <Content Include="Imágenes\Login.png" />
     <Content Include="Imágenes\Logo.png" />
     <None Include="Imágenes\Siguiente.png" />
+    <None Include="Imágenes\Polygon.png" />
+    <None Include="Imágenes\search_119641.ico" />
+    <None Include="Imágenes\remove-circle-1_icon-icons.com_48486.ico" />
+    <None Include="Imágenes\reload-webpage_icon-icons.com_53905.ico" />
     <Content Include="Imágenes\Usuario.png" />
     <Content Include="Imágenes\Ventas.png" />
     <None Include="Resources\icons8-sincronizar-33.png" />
