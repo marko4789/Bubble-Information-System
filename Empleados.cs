@@ -15,9 +15,9 @@ namespace Bubble_Information_System
     public partial class Empleados : Form
     {
         MySqlConnection conexion = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=;");
+       
         
 
-     
         public Empleados()
         {
             InitializeComponent();
@@ -35,7 +35,8 @@ namespace Bubble_Information_System
             adapter.Fill(table);
             dataGridView1.DataSource = table;
 
-            btnAgregar.Enabled = false; 
+            btnAgregar.Enabled = false;
+            
         }
         
         private void controlNombre()
@@ -271,6 +272,8 @@ namespace Bubble_Information_System
         {
             buscar(textbusqueda.Text);
         }
+
+       
     }
 }
 

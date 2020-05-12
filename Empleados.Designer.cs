@@ -29,20 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lbTitulo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textNumE = new System.Windows.Forms.TextBox();
-            this.textNombre = new System.Windows.Forms.TextBox();
-            this.textTelefono = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textApeP = new System.Windows.Forms.TextBox();
-            this.textApeM = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textDir = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoPaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,153 +37,50 @@
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.empleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dblavanderiaDataSet = new Bubble_Information_System.dblavanderiaDataSet();
-            this.empleadosTableAdapter = new Bubble_Information_System.dblavanderiaDataSetTableAdapters.empleadosTableAdapter();
-            this.btn_actualizar = new System.Windows.Forms.Button();
             this.numEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoPaternoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoMaternoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dblavanderiaDataSet = new Bubble_Information_System.dblavanderiaDataSet();
+            this.empleadosTableAdapter = new Bubble_Information_System.dblavanderiaDataSetTableAdapters.empleadosTableAdapter();
             this.textbusqueda = new System.Windows.Forms.TextBox();
+            this.textApeP = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textApeM = new System.Windows.Forms.TextBox();
+            this.textTelefono = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textNombre = new System.Windows.Forms.TextBox();
+            this.textDir = new System.Windows.Forms.TextBox();
+            this.textNumE = new System.Windows.Forms.TextBox();
+            this.lbTitulo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_deshabilitar = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblavanderiaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbTitulo
-            // 
-            this.lbTitulo.AutoSize = true;
-            this.lbTitulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitulo.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbTitulo.Location = new System.Drawing.Point(330, 34);
-            this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(243, 52);
-            this.lbTitulo.TabIndex = 1;
-            this.lbTitulo.Text = "Empleados";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 28);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Número de Empleado";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 226);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 28);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nombre";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 318);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 28);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Telefono";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(274, 226);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(181, 28);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Apellido Paterno";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // textNumE
-            // 
-            this.textNumE.Location = new System.Drawing.Point(265, 117);
-            this.textNumE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textNumE.Name = "textNumE";
-            this.textNumE.Size = new System.Drawing.Size(90, 26);
-            this.textNumE.TabIndex = 6;
-            this.textNumE.TextChanged += new System.EventHandler(this.textNumE_TextChanged);
-            // 
-            // textNombre
-            // 
-            this.textNombre.Location = new System.Drawing.Point(127, 228);
-            this.textNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(112, 26);
-            this.textNombre.TabIndex = 7;
-            this.textNombre.TextChanged += new System.EventHandler(this.textNombre_TextChanged);
-            // 
-            // textTelefono
-            // 
-            this.textTelefono.Location = new System.Drawing.Point(132, 321);
-            this.textTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textTelefono.Name = "textTelefono";
-            this.textTelefono.Size = new System.Drawing.Size(112, 26);
-            this.textTelefono.TabIndex = 8;
-            this.textTelefono.TextChanged += new System.EventHandler(this.textTelefono_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(603, 226);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 28);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Apellido Materno";
-            // 
-            // textApeP
-            // 
-            this.textApeP.Location = new System.Drawing.Point(461, 228);
-            this.textApeP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textApeP.Name = "textApeP";
-            this.textApeP.Size = new System.Drawing.Size(112, 26);
-            this.textApeP.TabIndex = 11;
-            this.textApeP.TextChanged += new System.EventHandler(this.textApeP_TextChanged);
-            // 
-            // textApeM
-            // 
-            this.textApeM.Location = new System.Drawing.Point(798, 226);
-            this.textApeM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textApeM.Name = "textApeM";
-            this.textApeM.Size = new System.Drawing.Size(112, 26);
-            this.textApeM.TabIndex = 12;
-            this.textApeM.TextChanged += new System.EventHandler(this.textApeM_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(274, 319);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 28);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Dirección";
-            // 
-            // textDir
-            // 
-            this.textDir.Location = new System.Drawing.Point(388, 321);
-            this.textDir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textDir.Name = "textDir";
-            this.textDir.Size = new System.Drawing.Size(210, 26);
-            this.textDir.TabIndex = 14;
-            this.textDir.TextChanged += new System.EventHandler(this.textDir_TextChanged);
             // 
             // Column1
             // 
@@ -240,20 +124,6 @@
             this.status.Name = "status";
             this.status.Width = 150;
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Image = global::Bubble_Information_System.Properties.Resources.icons8_añadir_48;
-            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(652, 291);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(202, 86);
-            this.btnAgregar.TabIndex = 17;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
@@ -267,36 +137,12 @@
             this.telefonoDataGridViewTextBoxColumn1,
             this.direccionDataGridViewTextBoxColumn1});
             this.dataGridView1.DataSource = this.empleadosBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(279, 531);
+            this.dataGridView1.Location = new System.Drawing.Point(317, 107);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(662, 240);
             this.dataGridView1.TabIndex = 18;
-            // 
-            // empleadosBindingSource
-            // 
-            this.empleadosBindingSource.DataMember = "empleados";
-            this.empleadosBindingSource.DataSource = this.dblavanderiaDataSet;
-            // 
-            // dblavanderiaDataSet
-            // 
-            this.dblavanderiaDataSet.DataSetName = "dblavanderiaDataSet";
-            this.dblavanderiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // empleadosTableAdapter
-            // 
-            this.empleadosTableAdapter.ClearBeforeFill = true;
-            // 
-            // btn_actualizar
-            // 
-            this.btn_actualizar.Location = new System.Drawing.Point(12, 613);
-            this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(102, 55);
-            this.btn_actualizar.TabIndex = 19;
-            this.btn_actualizar.Text = "Actualizar";
-            this.btn_actualizar.UseVisualStyleBackColor = true;
-            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // numEmpleadoDataGridViewTextBoxColumn
             // 
@@ -346,37 +192,275 @@
             this.direccionDataGridViewTextBoxColumn1.Name = "direccionDataGridViewTextBoxColumn1";
             this.direccionDataGridViewTextBoxColumn1.Width = 150;
             // 
+            // empleadosBindingSource
+            // 
+            this.empleadosBindingSource.DataMember = "empleados";
+            this.empleadosBindingSource.DataSource = this.dblavanderiaDataSet;
+            // 
+            // dblavanderiaDataSet
+            // 
+            this.dblavanderiaDataSet.DataSetName = "dblavanderiaDataSet";
+            this.dblavanderiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // empleadosTableAdapter
+            // 
+            this.empleadosTableAdapter.ClearBeforeFill = true;
+            // 
             // textbusqueda
             // 
-            this.textbusqueda.Location = new System.Drawing.Point(13, 464);
+            this.textbusqueda.Location = new System.Drawing.Point(40, 66);
             this.textbusqueda.Name = "textbusqueda";
-            this.textbusqueda.Size = new System.Drawing.Size(457, 26);
+            this.textbusqueda.Size = new System.Drawing.Size(701, 26);
             this.textbusqueda.TabIndex = 20;
             this.textbusqueda.TextChanged += new System.EventHandler(this.textbusqueda_TextChanged);
+            // 
+            // textApeP
+            // 
+            this.textApeP.Location = new System.Drawing.Point(464, 184);
+            this.textApeP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textApeP.Name = "textApeP";
+            this.textApeP.Size = new System.Drawing.Size(112, 26);
+            this.textApeP.TabIndex = 11;
+            this.textApeP.TextChanged += new System.EventHandler(this.textApeP_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(606, 182);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(189, 28);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Apellido Materno";
+            // 
+            // textApeM
+            // 
+            this.textApeM.Location = new System.Drawing.Point(801, 182);
+            this.textApeM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textApeM.Name = "textApeM";
+            this.textApeM.Size = new System.Drawing.Size(112, 26);
+            this.textApeM.TabIndex = 12;
+            this.textApeM.TextChanged += new System.EventHandler(this.textApeM_TextChanged);
+            // 
+            // textTelefono
+            // 
+            this.textTelefono.Location = new System.Drawing.Point(135, 253);
+            this.textTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textTelefono.Name = "textTelefono";
+            this.textTelefono.Size = new System.Drawing.Size(112, 26);
+            this.textTelefono.TabIndex = 8;
+            this.textTelefono.TextChanged += new System.EventHandler(this.textTelefono_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(277, 251);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 28);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Dirección";
+            // 
+            // textNombre
+            // 
+            this.textNombre.Location = new System.Drawing.Point(130, 184);
+            this.textNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(112, 26);
+            this.textNombre.TabIndex = 7;
+            this.textNombre.TextChanged += new System.EventHandler(this.textNombre_TextChanged);
+            // 
+            // textDir
+            // 
+            this.textDir.Location = new System.Drawing.Point(391, 253);
+            this.textDir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textDir.Name = "textDir";
+            this.textDir.Size = new System.Drawing.Size(210, 26);
+            this.textDir.TabIndex = 14;
+            this.textDir.TextChanged += new System.EventHandler(this.textDir_TextChanged);
+            // 
+            // textNumE
+            // 
+            this.textNumE.Location = new System.Drawing.Point(268, 126);
+            this.textNumE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textNumE.Name = "textNumE";
+            this.textNumE.Size = new System.Drawing.Size(90, 26);
+            this.textNumE.TabIndex = 6;
+            this.textNumE.TextChanged += new System.EventHandler(this.textNumE_TextChanged);
+            // 
+            // lbTitulo
+            // 
+            this.lbTitulo.AutoSize = true;
+            this.lbTitulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbTitulo.Location = new System.Drawing.Point(333, 9);
+            this.lbTitulo.Name = "lbTitulo";
+            this.lbTitulo.Size = new System.Drawing.Size(243, 52);
+            this.lbTitulo.TabIndex = 1;
+            this.lbTitulo.Text = "Empleados";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(277, 182);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(181, 28);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Apellido Paterno";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(29, 182);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 28);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Nombre";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(29, 124);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(233, 28);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Número de Empleado";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(29, 250);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 28);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Telefono";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Bubble_Information_System.Properties.Resources.icons8_búsqueda_48;
+            this.pictureBox1.Location = new System.Drawing.Point(748, 54);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Bubble_Information_System.Properties.Resources.Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(853, 14);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(114, 117);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btn_deshabilitar
+            // 
+            this.btn_deshabilitar.Image = global::Bubble_Information_System.Properties.Resources.icons8_menos_33;
+            this.btn_deshabilitar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_deshabilitar.Location = new System.Drawing.Point(40, 276);
+            this.btn_deshabilitar.Name = "btn_deshabilitar";
+            this.btn_deshabilitar.Size = new System.Drawing.Size(147, 55);
+            this.btn_deshabilitar.TabIndex = 21;
+            this.btn_deshabilitar.Text = "Deshabilitar";
+            this.btn_deshabilitar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_deshabilitar.UseVisualStyleBackColor = true;
+            // 
+            // btn_actualizar
+            // 
+            this.btn_actualizar.Image = global::Bubble_Information_System.Properties.Resources.icons8_sincronizar_33;
+            this.btn_actualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_actualizar.Location = new System.Drawing.Point(40, 184);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(147, 55);
+            this.btn_actualizar.TabIndex = 19;
+            this.btn_actualizar.Text = "Actualizar";
+            this.btn_actualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Image = global::Bubble_Information_System.Properties.Resources.icons8_añadir_331;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.Location = new System.Drawing.Point(772, 231);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(178, 62);
+            this.btnAgregar.TabIndex = 17;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.textbusqueda);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.btn_actualizar);
+            this.groupBox1.Controls.Add(this.btn_deshabilitar);
+            this.groupBox1.Location = new System.Drawing.Point(19, 316);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1012, 368);
+            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabStop = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(723, 24);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(53, 24);
+            this.radioButton1.TabIndex = 25;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "off";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(802, 25);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(52, 24);
+            this.radioButton2.TabIndex = 26;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "on";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 783);
-            this.Controls.Add(this.textbusqueda);
-            this.Controls.Add(this.btn_actualizar);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.textDir);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textApeM);
-            this.Controls.Add(this.textApeP);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textTelefono);
-            this.Controls.Add(this.textNombre);
-            this.Controls.Add(this.textNumE);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(1044, 735);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lbTitulo);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.textApeP);
+            this.Controls.Add(this.textNumE);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textDir);
+            this.Controls.Add(this.textApeM);
+            this.Controls.Add(this.textNombre);
+            this.Controls.Add(this.textTelefono);
+            this.Controls.Add(this.label6);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimizeBox = false;
             this.Name = "Empleados";
             this.Text = "Bubble System Information";
             this.Load += new System.EventHandler(this.Empleados_Load);
@@ -384,27 +468,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dblavanderiaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lbTitulo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.TextBox textDir;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textApeM;
-        private System.Windows.Forms.TextBox textApeP;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textTelefono;
-        private System.Windows.Forms.TextBox textNombre;
-        private System.Windows.Forms.TextBox textNumE;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoPaternoDataGridViewTextBoxColumn;
@@ -424,5 +498,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn1;
         private System.Windows.Forms.TextBox textbusqueda;
+        private System.Windows.Forms.Button btn_deshabilitar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbTitulo;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.TextBox textApeP;
+        private System.Windows.Forms.TextBox textNumE;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textDir;
+        private System.Windows.Forms.TextBox textApeM;
+        private System.Windows.Forms.TextBox textNombre;
+        private System.Windows.Forms.TextBox textTelefono;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }

@@ -146,6 +146,12 @@
     <Content Include="Imágenes\Logo.png" />
     <Content Include="Imágenes\Usuario.png" />
     <Content Include="Imágenes\Ventas.png" />
+    <None Include="Resources\icons8-sincronizar-33.png" />
+    <None Include="Resources\icons8-añadir-332.png" />
+    <None Include="Resources\icons8-añadir-331.png" />
+    <None Include="Resources\icons8-añadir-33.png" />
+    <None Include="Resources\icons8-menos-33.png" />
+    <None Include="Resources\icons8-búsqueda-48.png" />
     <None Include="Resources\icons8-añadir-48.png" />
     <None Include="Resources\Usuario.png" />
     <None Include="Resources\icons8-caja-registradora-48.png" />

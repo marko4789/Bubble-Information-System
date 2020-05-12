@@ -113,9 +113,29 @@ namespace Bubble_Information_System.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_añadir_331 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-añadir-331", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_añadir_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-añadir-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_búsqueda_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-búsqueda-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +176,26 @@ namespace Bubble_Information_System.Properties {
         internal static System.Drawing.Bitmap icons8_historial_de_pagos_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-historial-de-pagos-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_menos_33 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-menos-33", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sincronizar_33 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sincronizar-33", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
