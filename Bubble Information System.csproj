@@ -140,10 +140,14 @@
   <ItemGroup>
     <Content Include="Imágenes\Adeudos.png" />
     <Content Include="Imágenes\Administrador.png" />
+    <None Include="Imágenes\Calendario.png" />
+    <None Include="Imágenes\Buscar.png" />
     <Content Include="Imágenes\Clientes.png" />
     <Content Include="Imágenes\Corte de caja.png" />
+    <None Include="Imágenes\Imprimir.png" />
     <Content Include="Imágenes\Login.png" />
     <Content Include="Imágenes\Logo.png" />
+    <None Include="Imágenes\Siguiente.png" />
     <Content Include="Imágenes\Usuario.png" />
     <Content Include="Imágenes\Ventas.png" />
     <None Include="Resources\icons8-sincronizar-33.png" />

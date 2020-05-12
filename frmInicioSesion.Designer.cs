@@ -49,7 +49,7 @@
             this.btnIniciarSesion.Location = new System.Drawing.Point(231, 201);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(114, 27);
-            this.btnIniciarSesion.TabIndex = 0;
+            this.btnIniciarSesion.TabIndex = 2;
             this.btnIniciarSesion.Text = "Iniciar sesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
@@ -79,7 +79,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(233, 116);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(112, 20);
-            this.txtUsuario.TabIndex = 3;
+            this.txtUsuario.TabIndex = 0;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtContrasena
@@ -88,10 +88,11 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(112, 20);
-            this.txtContrasena.TabIndex = 4;
+            this.txtContrasena.TabIndex = 1;
             this.txtContrasena.Tag = "";
             this.txtContrasena.UseSystemPasswordChar = true;
             this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
             // 
             // lbTitulo
             // 
@@ -142,6 +143,7 @@
             this.Controls.Add(this.btnIniciarSesion);
             this.Name = "FrmInicioSesion";
             this.Text = "Bubble System Information";
+            this.Load += new System.EventHandler(this.FrmInicioSesion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
