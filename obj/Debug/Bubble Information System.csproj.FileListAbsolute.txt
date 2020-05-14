@@ -45,3 +45,20 @@ C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bub
 C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.CopyComplete
 C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble Information System.exe
 C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble Information System.pdb
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\bin\Debug\Bubble Information System.exe.config
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\bin\Debug\Bubble Information System.exe
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\bin\Debug\Bubble Information System.pdb
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\bin\Debug\MySql.Data.xml
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble Information System.csprojAssemblyReference.cache
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.Empleados.resources
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.FrmInicioSesion.resources
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmServicios.resources
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmVentas.resources
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuAd.resources
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuUs.resources
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.Properties.Resources.resources
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.GenerateResource.cache
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.CopyComplete
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble Information System.exe
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble Information System.pdb
+C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmClientes.resources

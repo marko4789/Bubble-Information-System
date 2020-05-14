@@ -62,6 +62,12 @@
     <Compile Include="Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
@@ -149,6 +158,10 @@
   <ItemGroup>
     <Content Include="Imágenes\Adeudos.png" />
     <Content Include="Imágenes\Administrador.png" />
+    <None Include="Resources\search_119641.ico" />
+    <None Include="Resources\icons8-añadir-481.png" />
+    <None Include="Resources\icons8-añadir-333.png" />
+    <None Include="Resources\icons8-añadir-3321.png" />
     <None Include="Imágenes\Calendario.png" />
     <None Include="Imágenes\Buscar.png" />
     <Content Include="Imágenes\Clientes.png" />
