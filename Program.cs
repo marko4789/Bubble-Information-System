@@ -16,7 +16,11 @@ namespace Bubble_Information_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new FrmInicioSesion());
+=======
+            Application.Run(new frmClientes());
+>>>>>>> 6bc5d8620441e9b935ce9f1868536fce9977ab45
         }
     }
 }

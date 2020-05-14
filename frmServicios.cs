@@ -440,7 +440,7 @@ namespace Bubble_Information_System
             if (existe)
             {
                 DialogResult resul;
-                resul = MessageBox.Show("¿Está seguro que desea deshabilitar el registro " + txtNumSer.Text, "Bubble Informatio System", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                resul = MessageBox.Show("¿Está seguro que desea deshabilitar el registro " + txtNumSer.Text+"?", "Bubble Informatio System", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resul == DialogResult.Yes)
                 {
                     string consulta = "update servicios set status=1 where numServicio=?numServicio and status=0";
@@ -519,5 +519,9 @@ namespace Bubble_Information_System
             return folio;
         }//fin obtener folio
 
+        private void cmbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

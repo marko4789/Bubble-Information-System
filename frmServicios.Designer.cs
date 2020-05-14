@@ -42,7 +42,6 @@
             this.cmbFiltro = new System.Windows.Forms.ComboBox();
             this.txtDinamica = new System.Windows.Forms.TextBox();
             this.dataGridViewServicios = new System.Windows.Forms.DataGridView();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.rdbStatusDown = new System.Windows.Forms.RadioButton();
             this.rdbStatusUp = new System.Windows.Forms.RadioButton();
             this.lbTitulo = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnLogo = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -75,7 +75,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(403, 138);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(140, 26);
-            this.txtPrecio.TabIndex = 1;
+            this.txtPrecio.TabIndex = 3;
             this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
@@ -85,7 +85,7 @@
             this.txtNombreSer.Location = new System.Drawing.Point(181, 90);
             this.txtNombreSer.Name = "txtNombreSer";
             this.txtNombreSer.Size = new System.Drawing.Size(239, 26);
-            this.txtNombreSer.TabIndex = 2;
+            this.txtNombreSer.TabIndex = 1;
             this.txtNombreSer.TextChanged += new System.EventHandler(this.txtNombreSer_TextChanged);
             // 
             // cmbFormaCobro
@@ -100,7 +100,7 @@
             this.cmbFormaCobro.Location = new System.Drawing.Point(182, 133);
             this.cmbFormaCobro.Name = "cmbFormaCobro";
             this.cmbFormaCobro.Size = new System.Drawing.Size(139, 28);
-            this.cmbFormaCobro.TabIndex = 3;
+            this.cmbFormaCobro.TabIndex = 2;
             this.cmbFormaCobro.SelectedIndexChanged += new System.EventHandler(this.cmbFormaCobro_SelectedIndexChanged);
             // 
             // label1
@@ -173,7 +173,8 @@
             this.cmbFiltro.Location = new System.Drawing.Point(22, 35);
             this.cmbFiltro.Name = "cmbFiltro";
             this.cmbFiltro.Size = new System.Drawing.Size(139, 28);
-            this.cmbFiltro.TabIndex = 26;
+            this.cmbFiltro.TabIndex = 9;
+            this.cmbFiltro.SelectedIndexChanged += new System.EventHandler(this.cmbFiltro_SelectedIndexChanged);
             // 
             // txtDinamica
             // 
@@ -181,7 +182,7 @@
             this.txtDinamica.Location = new System.Drawing.Point(175, 37);
             this.txtDinamica.Name = "txtDinamica";
             this.txtDinamica.Size = new System.Drawing.Size(295, 26);
-            this.txtDinamica.TabIndex = 25;
+            this.txtDinamica.TabIndex = 6;
             this.txtDinamica.TextChanged += new System.EventHandler(this.txtDinamica_TextChanged);
             // 
             // dataGridViewServicios
@@ -215,20 +216,6 @@
             this.dataGridViewServicios.TabIndex = 24;
             this.dataGridViewServicios.TabStop = false;
             this.dataGridViewServicios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewServicios_CellContentClick);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnActualizar.Image = global::Bubble_Information_System.Properties.Resources.reload_webpage_icon_icons_com_53905;
-            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(6, 165);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(158, 42);
-            this.btnActualizar.TabIndex = 23;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // rdbStatusDown
             // 
@@ -347,11 +334,25 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 51);
-            this.btnAgregar.TabIndex = 18;
+            this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnActualizar.Image = global::Bubble_Information_System.Properties.Resources.reload_webpage_icon_icons_com_53905;
+            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizar.Location = new System.Drawing.Point(6, 165);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(158, 42);
+            this.btnActualizar.TabIndex = 7;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnDeshabilitar
             // 
@@ -362,7 +363,7 @@
             this.btnDeshabilitar.Location = new System.Drawing.Point(6, 101);
             this.btnDeshabilitar.Name = "btnDeshabilitar";
             this.btnDeshabilitar.Size = new System.Drawing.Size(158, 46);
-            this.btnDeshabilitar.TabIndex = 22;
+            this.btnDeshabilitar.TabIndex = 8;
             this.btnDeshabilitar.Text = "Deshabilitar";
             this.btnDeshabilitar.UseVisualStyleBackColor = true;
             this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click);
@@ -376,7 +377,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(541, 19);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(139, 46);
-            this.btnBuscar.TabIndex = 19;
+            this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.button1_Click);
