@@ -428,7 +428,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Bubble_Information_System.Properties.Resources.Calendario;
-            this.pictureBox1.Location = new System.Drawing.Point(188, 97);
+            this.pictureBox1.Location = new System.Drawing.Point(164, 97);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

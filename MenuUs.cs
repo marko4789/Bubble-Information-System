@@ -25,13 +25,13 @@ namespace Bubble_Information_System
 
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (frmVentas ventanaVentas = new frmVentas())
+            using (frmVentas ventanaVentas = new frmVentas(this.numEmpleado))
                 ventanaVentas.ShowDialog();
         }
 
         private void btn_Venta_Click(object sender, EventArgs e)
         {
-            using (frmVentas ventanaVentas = new frmVentas())
+            using (frmVentas ventanaVentas = new frmVentas(this.numEmpleado))
                 ventanaVentas.ShowDialog();
         }
 
@@ -68,6 +68,12 @@ namespace Bubble_Information_System
             {
                 conexionBD.Close();
             }
+        }
+
+        private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (frmServicios ventanaServicios = new frmServicios())
+                ventanaServicios.ShowDialog();
         }
     }
 }

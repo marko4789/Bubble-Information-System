@@ -14,10 +14,11 @@ namespace Bubble_Information_System
 {
     public partial class frmVentas : Form
     {
-
+        int numEmpleado;
         MySqlConnection conexionBD = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=;");
-        public frmVentas()
+        public frmVentas(int numEmpleado)
         {
+            this.numEmpleado = numEmpleado;
             InitializeComponent();
         }
 
@@ -33,7 +34,35 @@ namespace Bubble_Information_System
 
         private void txtCliente_TextChanged(object sender, EventArgs e)
         {
+            if (!txtCliente.Text.Equals(" Buscar") && !txtCliente.Text.Equals(""))
+            {
+                String consulta = "";
 
+                try
+                {
+                    if (txtCliente.Text.All(char.IsDigit))
+                        {
+                            consulta = "Select numCliente, nombre, apellidoPaterno, apellidoMaterno, telefono from clientes where numCliente=" + txtCliente.Text + " and status=0";
+                        }
+                    else{
+                        consulta = "Select numCliente, nombre, apellidoPaterno, apellidoMaterno, telefono from clientes where nombre like '%" + txtCliente.Text + "%' or apellidoMaterno like '%" + txtCliente.Text + "%' or apellidoPaterno like '%" + txtCliente.Text + "%' and status=0";
+                    }
+                    MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, conexionBD);
+                    conexionBD.Open();
+                    DataSet datos = new DataSet();
+                    adaptador.Fill(datos, "clientes");
+                    dgvClientes.DataSource = datos;
+                    dgvClientes.DataMember = "clientes";
+                }
+                catch (MySqlException SqlE)
+                {
+                    MessageBox.Show(SqlE.ToString());
+                }
+                finally
+                {
+                    conexionBD.Close();
+                }
+            }
         }
 
         private void frmVentas_Load(object sender, EventArgs e)
@@ -45,8 +74,6 @@ namespace Bubble_Information_System
             
             txtCliente.Text = " Buscar";
             txtCliente.ForeColor = Color.Gray;
-
-            
 
             try
             {
@@ -64,10 +91,19 @@ namespace Bubble_Information_System
                 {
                     folio = 0;
                 }
-                
-                folio++;
 
+                folio++;
                 txtFolio.Text = Convert.ToString(folio);
+
+                aux = new DataTable();
+                MySqlCommand comando = new MySqlCommand("SELECT nombre, apellidoPaterno, apellidoMaterno FROM empleados where numEmpleado =?numEmpleado", conexionBD);
+                comando.Parameters.AddWithValue("numEmpleado", numEmpleado);
+                adapter = new MySqlDataAdapter(comando);
+
+                adapter.Fill(aux);
+
+                txtEmpleado.Text = Convert.ToString(aux.Rows[0][0]) + " " + Convert.ToString(aux.Rows[0][1]) + " " + Convert.ToString(aux.Rows[0][2]);
+
 
             }
             catch(MySqlException SqlE)
@@ -79,8 +115,16 @@ namespace Bubble_Information_System
                 conexionBD.Close();
             }
 
+        }
 
-
+        public void llenarTabla()
+        {
+            String consulta = "Select numCliente, nombre, apellidoPaterno, apellidoMaterno, telefono from clientes where status = 1";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, conexionBD);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dgvClientes.DataSource = table;
+            
         }
 
         private void txtCliente_Enter(object sender, EventArgs e)

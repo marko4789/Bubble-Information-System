@@ -86,6 +86,7 @@
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
             this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
             this.serviciosToolStripMenuItem.Text = "Servicios";
+            this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
@@ -150,7 +151,7 @@
             // 
             this.pictureBox1.Image = global::Bubble_Information_System.Properties.Resources.Administrador1;
             this.pictureBox1.Location = new System.Drawing.Point(34, 29);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(121, 103);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -162,7 +163,7 @@
             this.btn_Corte.Image = global::Bubble_Information_System.Properties.Resources.icons8_caja_registradora_48;
             this.btn_Corte.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Corte.Location = new System.Drawing.Point(419, 237);
-            this.btn_Corte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Corte.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Corte.Name = "btn_Corte";
             this.btn_Corte.Size = new System.Drawing.Size(121, 67);
             this.btn_Corte.TabIndex = 8;
@@ -176,7 +177,7 @@
             this.btn_Adeudos.Image = global::Bubble_Information_System.Properties.Resources.icons8_historial_de_pagos_48;
             this.btn_Adeudos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Adeudos.Location = new System.Drawing.Point(236, 237);
-            this.btn_Adeudos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Adeudos.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Adeudos.Name = "btn_Adeudos";
             this.btn_Adeudos.Size = new System.Drawing.Size(121, 67);
             this.btn_Adeudos.TabIndex = 7;
@@ -190,7 +191,7 @@
             this.btn_Cliente.Image = global::Bubble_Information_System.Properties.Resources.icons8_grupo_de_usuario_48;
             this.btn_Cliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Cliente.Location = new System.Drawing.Point(419, 134);
-            this.btn_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cliente.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cliente.Name = "btn_Cliente";
             this.btn_Cliente.Size = new System.Drawing.Size(121, 67);
             this.btn_Cliente.TabIndex = 6;
@@ -203,7 +204,7 @@
             this.btn_Venta.Image = global::Bubble_Information_System.Properties.Resources.icons8_checkout_48;
             this.btn_Venta.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Venta.Location = new System.Drawing.Point(236, 134);
-            this.btn_Venta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Venta.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Venta.Name = "btn_Venta";
             this.btn_Venta.Size = new System.Drawing.Size(121, 67);
             this.btn_Venta.TabIndex = 5;

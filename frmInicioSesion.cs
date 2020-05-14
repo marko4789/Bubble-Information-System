@@ -17,7 +17,6 @@ namespace Bubble_Information_System
         private MySqlConnection     conexionDB;
         private MySqlCommand        sqlComando;
         private MySqlDataAdapter    adaptador;
-        private MySqlDataReader     registro;
         public FrmInicioSesion()
         {
             InitializeComponent();
