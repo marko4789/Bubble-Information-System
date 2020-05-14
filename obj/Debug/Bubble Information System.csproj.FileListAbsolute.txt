@@ -82,3 +82,4 @@ C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble In
 C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble Information System.pdb
 C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmClientes.resources
 >>>>>>> 6bc5d8620441e9b935ce9f1868536fce9977ab45
+C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmClientes.resources
