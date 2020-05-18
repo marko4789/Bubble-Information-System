@@ -107,6 +107,7 @@
             this.adeudosToolStripMenuItem.Name = "adeudosToolStripMenuItem";
             this.adeudosToolStripMenuItem.Size = new System.Drawing.Size(66, 22);
             this.adeudosToolStripMenuItem.Text = "Adeudos";
+            this.adeudosToolStripMenuItem.Click += new System.EventHandler(this.adeudosToolStripMenuItem_Click);
             // 
             // corteToolStripMenuItem
             // 
@@ -185,6 +186,7 @@
             this.btn_Adeudos.Text = "Adeudos";
             this.btn_Adeudos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Adeudos.UseVisualStyleBackColor = false;
+            this.btn_Adeudos.Click += new System.EventHandler(this.btn_Adeudos_Click);
             // 
             // btn_Cliente
             // 

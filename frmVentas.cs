@@ -562,6 +562,12 @@ namespace Bubble_Information_System
             return linea.AppendLine(iguales).ToString();
         }
 
+        private void btnAdeudos_Click(object sender, EventArgs e)
+        {
+            using (frmAdeudos ventanaAdeudos = new frmAdeudos())
+                ventanaAdeudos.ShowDialog();
+        }
+
         public void encabezado()
         {
             linea.AppendLine("          LAS POMPAS DE JABON           ");

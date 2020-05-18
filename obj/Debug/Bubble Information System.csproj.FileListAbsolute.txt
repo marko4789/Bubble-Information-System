@@ -34,3 +34,4 @@ C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Informati
 C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.CopyComplete
 C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.exe
 C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.pdb
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmAdeudos.resources

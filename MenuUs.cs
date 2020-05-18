@@ -87,5 +87,17 @@ namespace Bubble_Information_System
             using (frmClientes ventanaClientes = new frmClientes())
                 ventanaClientes.ShowDialog();
         }
+
+        private void btn_Adeudos_Click(object sender, EventArgs e)
+        {
+            using (frmAdeudos ventanaAdeudos = new frmAdeudos())
+                ventanaAdeudos.ShowDialog();
+        }
+
+        private void adeudosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (frmAdeudos ventanaAdeudos = new frmAdeudos())
+                ventanaAdeudos.ShowDialog();
+        }
     }
 }
