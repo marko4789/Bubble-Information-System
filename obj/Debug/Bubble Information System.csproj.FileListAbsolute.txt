@@ -1,94 +1,8 @@
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\bin\Debug\Bubble Information System.exe.config
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\bin\Debug\Bubble Information System.exe
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\bin\Debug\Bubble Information System.pdb
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\bin\Debug\MySql.Data.xml
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble Information System.csprojAssemblyReference.cache
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble_Information_System.Empleados.resources
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble_Information_System.FrmInicioSesion.resources
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmVentas.resources
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuAd.resources
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuUs.resources
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble_Information_System.Properties.Resources.resources
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.GenerateResource.cache
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.CopyComplete
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble Information System.exe
-C:\Users\Edgar\Documents\GitHub\Bubble-Information-System\obj\Debug\Bubble Information System.pdb
-C:\Users\marko\source\repos\Bubble-Information-System\bin\Debug\Bubble Information System.exe.config
-C:\Users\marko\source\repos\Bubble-Information-System\bin\Debug\Bubble Information System.exe
-C:\Users\marko\source\repos\Bubble-Information-System\bin\Debug\Bubble Information System.pdb
-C:\Users\marko\source\repos\Bubble-Information-System\bin\Debug\MySql.Data.dll
-C:\Users\marko\source\repos\Bubble-Information-System\bin\Debug\MySql.Data.xml
-C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.csprojAssemblyReference.cache
-C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.Empleados.resources
-C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.FrmInicioSesion.resources
-C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmVentas.resources
-C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuAd.resources
-C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuUs.resources
-C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.Properties.Resources.resources
-C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.GenerateResource.cache
-C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.CopyComplete
-C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.exe
-C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.pdb
-C:\Users\matri\Bubble Information System\Bubble-Information-System\bin\Debug\Bubble Information System.exe.config
-C:\Users\matri\Bubble Information System\Bubble-Information-System\bin\Debug\Bubble Information System.exe
-C:\Users\matri\Bubble Information System\Bubble-Information-System\bin\Debug\Bubble Information System.pdb
-C:\Users\matri\Bubble Information System\Bubble-Information-System\bin\Debug\MySql.Data.xml
-C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble Information System.csprojAssemblyReference.cache
-C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble_Information_System.Empleados.resources
-C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble_Information_System.FrmInicioSesion.resources
-C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmServicios.resources
-C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmVentas.resources
-C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuAd.resources
-C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuUs.resources
-C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble_Information_System.Properties.Resources.resources
-C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.GenerateResource.cache
-C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.CopyComplete
-C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble Information System.exe
-C:\Users\matri\Bubble Information System\Bubble-Information-System\obj\Debug\Bubble Information System.pdb
-<<<<<<< HEAD
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\bin\Debug\Bubble Information System.exe.config
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\bin\Debug\Bubble Information System.exe
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\bin\Debug\Bubble Information System.pdb
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\bin\Debug\MySql.Data.dll
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\bin\Debug\MySql.Data.xml
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble Information System.csprojAssemblyReference.cache
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble_Information_System.Empleados.resources
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble_Information_System.FrmInicioSesion.resources
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmServicios.resources
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmVentas.resources
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuAd.resources
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuUs.resources
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble_Information_System.Properties.Resources.resources
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.GenerateResource.cache
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.CopyComplete
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble Information System.exe
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble Information System.pdb
-=======
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\bin\Debug\Bubble Information System.exe.config
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\bin\Debug\Bubble Information System.exe
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\bin\Debug\Bubble Information System.pdb
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\bin\Debug\MySql.Data.xml
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble Information System.csprojAssemblyReference.cache
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.Empleados.resources
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.FrmInicioSesion.resources
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmServicios.resources
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmVentas.resources
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuAd.resources
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuUs.resources
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.Properties.Resources.resources
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.GenerateResource.cache
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.CopyComplete
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble Information System.exe
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble Information System.pdb
-C:\Users\matri\Sistema Lavandería\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmClientes.resources
->>>>>>> 6bc5d8620441e9b935ce9f1868536fce9977ab45
-C:\Users\marko\source\repos\Bubble-Information-System\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmClientes.resources
 C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\bin\Debug\Bubble Information System.exe.config
 C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\bin\Debug\Bubble Information System.exe
 C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\bin\Debug\Bubble Information System.pdb
 C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\bin\Debug\MySql.Data.dll
 C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\bin\Debug\MySql.Data.xml
-C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\obj\Debug\Bubble Information System.csprojAssemblyReference.cache
 C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\obj\Debug\Bubble_Information_System.Empleados.resources
 C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmClientes.resources
 C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\obj\Debug\Bubble_Information_System.FrmInicioSesion.resources
@@ -101,3 +15,22 @@ C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-S
 C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.CopyComplete
 C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\obj\Debug\Bubble Information System.exe
 C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\obj\Debug\Bubble Information System.pdb
+C:\Users\marko\source\repos\Bubble-Information-System\clone\Bubble-Information-System\obj\Debug\Bubble Information System.csprojAssemblyReference.cache
+C:\Users\marko\source\repos\Bubble-Information-System\bin\Debug\Bubble Information System.exe.config
+C:\Users\marko\source\repos\Bubble-Information-System\bin\Debug\Bubble Information System.exe
+C:\Users\marko\source\repos\Bubble-Information-System\bin\Debug\Bubble Information System.pdb
+C:\Users\marko\source\repos\Bubble-Information-System\bin\Debug\MySql.Data.dll
+C:\Users\marko\source\repos\Bubble-Information-System\bin\Debug\MySql.Data.xml
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.csprojAssemblyReference.cache
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.Empleados.resources
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmClientes.resources
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.FrmInicioSesion.resources
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmServicios.resources
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmVentas.resources
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuAd.resources
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.MenuUs.resources
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.Properties.Resources.resources
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.GenerateResource.cache
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.csproj.CopyComplete
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.exe
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble Information System.pdb

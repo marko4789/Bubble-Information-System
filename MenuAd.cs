@@ -82,5 +82,17 @@ namespace Bubble_Information_System
             using (frmServicios ventanaServicios = new frmServicios())
                 ventanaServicios.ShowDialog();
         }
+
+        private void btn_Cliente_Click(object sender, EventArgs e)
+        {
+            using (frmClientes ventanaClientes = new frmClientes())
+                ventanaClientes.ShowDialog();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (frmClientes ventanaClientes = new frmClientes())
+                ventanaClientes.ShowDialog();
+        }
     }
 }

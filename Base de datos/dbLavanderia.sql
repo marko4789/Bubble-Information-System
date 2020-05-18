@@ -41,7 +41,7 @@ DROP TABLE IF EXISTS `detalleservicio`;
 
 CREATE TABLE `detalleservicio` (
   `numDetalleSer` INT(10) NOT NULL AUTO_INCREMENT,
-  `cantidad` INT(10) DEFAULT NULL,
+  `cantidad` FLOAT DEFAULT NULL,
   `totalPagar` FLOAT DEFAULT NULL,
   `numServicio` INT(10) DEFAULT NULL,
   `numVentaServicio` INT(10) DEFAULT NULL,

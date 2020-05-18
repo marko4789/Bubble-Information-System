@@ -110,6 +110,7 @@
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem
             // 
@@ -191,6 +192,7 @@
             this.btn_Cliente.Text = "Clientes";
             this.btn_Cliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Cliente.UseVisualStyleBackColor = false;
+            this.btn_Cliente.Click += new System.EventHandler(this.btn_Cliente_Click);
             // 
             // btn_Venta
             // 
