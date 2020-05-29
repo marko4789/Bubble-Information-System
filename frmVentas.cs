@@ -18,17 +18,21 @@ namespace Bubble_Information_System
 {
     public partial class frmVentas : Form
     {
+        bool FINALIZADO;
         int idServicio;
         int numEmpleado;
-        MySqlConnection conexionBD = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=;");
+        MySqlConnection conexionBD = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=; Convert Zero Datetime=True; Allow Zero Datetime=True");
         StringBuilder linea = new StringBuilder();
         int maxCar = 40, cortar;
         String Cliente;
         DateTime fecha;
+        MySqlDateTime fechaSQL;
         public frmVentas(int numEmpleado)
         {
             this.numEmpleado = numEmpleado;
+            this.FINALIZADO = false;
             this.fecha = DateTime.Today;
+
             InitializeComponent();
         }
 
@@ -44,7 +48,7 @@ namespace Bubble_Information_System
 
         private void txtCliente_TextChanged(object sender, EventArgs e)
         {
-            if (!txtCliente.Text.Equals(" Buscar") && !txtCliente.Text.Equals(""))
+            if (!txtCliente.Text.Equals(" Buscar") && !txtCliente.Text.Equals("") && !txtCliente.Text.Equals(this.Cliente))
             {
                 String consulta = "";
 
@@ -79,7 +83,7 @@ namespace Bubble_Information_System
         {
             int folio;
             
-            txtFecha.Text = this.fecha.ToString("dd/M/yyyy");
+            txtFecha.Text = this.fecha.ToString("yyyy-MM-dd");
 
             
             txtCliente.Text = " Buscar";
@@ -133,18 +137,31 @@ namespace Bubble_Information_System
 
                 int numUsuario = Convert.ToInt32(aux.Rows[0][0]);
                
-                consulta = "insert into ventaservicio (numVentaServicio, fecha, importe, status, numUsuario, numCliente) values ('" + txtFolio.Text + "','" + "?fecha" + "','" + "0" + "','" + "1" + "','" + numUsuario.ToString() + "','" + "1" + "');  ";
+                consulta = "insert into ventaservicio (numVentaServicio, fecha, importe, status, numUsuario, numCliente) values ('" + txtFolio.Text + "','" + fecha.ToString("yyyy-MM-dd") + "','" + "0" + "','" + "1" + "','" + numUsuario.ToString() + "','" + "1" + "');  ";
                 MySqlCommand agregar = new MySqlCommand(consulta, conexionBD);
-                agregar.Parameters.AddWithValue("fecha", fecha);
+                //agregar.Parameters.AddWithValue("fecha", fecha.ToString("yyyy-MM-dd"));
+                
                 agregar.Parameters.AddWithValue("numUsuario", numUsuario.ToString());
+
                 MySqlDataReader leer;
                 leer = agregar.ExecuteReader();
+
                 //MessageBox.Show("Guardado con éxito", "Bubble Information Syste", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (leer.Read())
                 {
 
                 }
-                
+
+                conexionBD.Close();
+
+                consulta = "Select numCliente, nombre, apellidoPaterno, apellidoMaterno, telefono from clientes where status=0";
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, conexionBD);
+                DataSet datos = new DataSet();
+                conexionBD.Open();
+                adaptador.Fill(datos, "clientes");
+                dgvClientes.DataSource = datos;
+                dgvClientes.DataMember = "clientes";
+
 
             }
             catch(MySqlException SqlE)
@@ -253,6 +270,8 @@ namespace Bubble_Information_System
                 {
 
                 }
+
+                MessageBox.Show("El servicio se ha agregado la venta con exito", "Bubble Information System");
             }
 
             catch (Exception ex)
@@ -263,8 +282,10 @@ namespace Bubble_Information_System
             {
                 conexionBD.Close();
             }
-            btnFinalizarVenta.Enabled = true;
 
+            btnFinalizarVenta.Enabled = true;
+            txtCantidad.Text = "";
+            txtTotal.Text = "";
             llenarTabla();
         }
 
@@ -311,6 +332,7 @@ namespace Bubble_Information_System
                 conexionBD.Open();
                 MySqlCommand comando = new MySqlCommand(consulta, conexionBD);
                 comando.ExecuteNonQuery();
+                txtCliente.Text = this.Cliente;
             }
             catch(MySqlException sqlE)
             {
@@ -320,9 +342,6 @@ namespace Bubble_Information_System
             {
                 conexionBD.Close();
             }
-            
-            
-
         }
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
@@ -385,6 +404,7 @@ namespace Bubble_Information_System
                     MySqlCommand comando1 = new MySqlCommand(consulta, conexionBD);
                     conexionBD.Open();
                     comando1.ExecuteNonQuery();
+                    MessageBox.Show("La venta se ha finalizado con exito", "Bubble Information System");
                 }
                 catch (MySqlException sqlE)
                 {
@@ -393,7 +413,9 @@ namespace Bubble_Information_System
                 finally
                 {
                     conexionBD.Close();
+                    this.FINALIZADO = true;
                     btnImprimir.Enabled = true;
+                    btnAdeudos.Enabled = true;
                     pictureBox4.BackColor = Color.FromArgb(225, 225, 225);
                 }
 
@@ -402,6 +424,11 @@ namespace Bubble_Information_System
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            cancelar();
+        }
+
+        void cancelar()
         {
             try
             {
@@ -412,6 +439,8 @@ namespace Bubble_Information_System
                 consulta = "DELETE FROM ventaservicio WHERE numVentaServicio = " + txtFolio.Text;
                 comando = new MySqlCommand(consulta, conexionBD);
                 comando.ExecuteNonQuery();
+
+                MessageBox.Show("La venta se ha sido cancelada", "Bubble Information System");
             }
             catch (MySqlException sqlE)
             {
@@ -423,7 +452,6 @@ namespace Bubble_Information_System
             }
 
             this.Close();
-
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -564,8 +592,59 @@ namespace Bubble_Information_System
 
         private void btnAdeudos_Click(object sender, EventArgs e)
         {
-            using (frmAdeudos ventanaAdeudos = new frmAdeudos())
+            using (frmAdeudos ventanaAdeudos = new frmAdeudos(txtFolio.Text))
                 ventanaAdeudos.ShowDialog();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (!txtCliente.Text.Equals(" Buscar") && !txtCliente.Text.Equals(""))
+            {
+                String consulta = "";
+
+                try
+                {
+                    if (txtCliente.Text.All(char.IsDigit))
+                    {
+                        consulta = "Select numCliente, nombre, apellidoPaterno, apellidoMaterno, telefono from clientes where numCliente=" + txtCliente.Text + " and status=0";
+                    }
+                    else
+                    {
+                        consulta = "Select numCliente, nombre, apellidoPaterno, apellidoMaterno, telefono from clientes where nombre like '%" + txtCliente.Text + "%' or apellidoMaterno like '%" + txtCliente.Text + "%' or apellidoPaterno like '%" + txtCliente.Text + "%' and status=0";
+                    }
+                    MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, conexionBD);
+                    conexionBD.Open();
+                    DataSet datos = new DataSet();
+                    adaptador.Fill(datos, "clientes");
+                    dgvClientes.DataSource = datos;
+                    dgvClientes.DataMember = "clientes";
+                    if(dgvClientes.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Cliente no encontrado", "Bubble Information System");
+                    }
+                }
+                catch (MySqlException SqlE)
+                {
+                    MessageBox.Show(SqlE.ToString());
+                }
+                finally
+                {
+                    conexionBD.Close();
+                }
+            }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmVentas_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!this.FINALIZADO)
+            {
+                cancelar();
+            }
         }
 
         public void encabezado()

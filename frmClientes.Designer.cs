@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbFiltro = new System.Windows.Forms.ComboBox();
+            this.btnDeshabilitar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
+            this.rdbOff = new System.Windows.Forms.RadioButton();
+            this.rdbOn = new System.Windows.Forms.RadioButton();
+            this.txtDinamica = new System.Windows.Forms.TextBox();
             this.txtNumCliente = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtApellidoMaterno = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
-            this.txtDinamica = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.rdbOn = new System.Windows.Forms.RadioButton();
-            this.rdbOff = new System.Windows.Forms.RadioButton();
-            this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
-            this.btnDeshabilitar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.cmbFiltro = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLogo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
@@ -77,6 +77,125 @@
             this.groupBox1.Size = new System.Drawing.Size(746, 251);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // cmbFiltro
+            // 
+            this.cmbFiltro.BackColor = System.Drawing.Color.Honeydew;
+            this.cmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFiltro.FormattingEnabled = true;
+            this.cmbFiltro.Items.AddRange(new object[] {
+            "numCliente",
+            "nombre",
+            "apellidoPaterno",
+            "apellidoMaterno"});
+            this.cmbFiltro.Location = new System.Drawing.Point(18, 39);
+            this.cmbFiltro.Name = "cmbFiltro";
+            this.cmbFiltro.Size = new System.Drawing.Size(135, 28);
+            this.cmbFiltro.TabIndex = 10;
+            // 
+            // btnDeshabilitar
+            // 
+            this.btnDeshabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeshabilitar.Image = global::Bubble_Information_System.Properties.Resources.remove_circle_1_icon_icons_com_48486;
+            this.btnDeshabilitar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeshabilitar.Location = new System.Drawing.Point(6, 100);
+            this.btnDeshabilitar.Name = "btnDeshabilitar";
+            this.btnDeshabilitar.Size = new System.Drawing.Size(161, 47);
+            this.btnDeshabilitar.TabIndex = 8;
+            this.btnDeshabilitar.Text = "Deshabilitar";
+            this.btnDeshabilitar.UseVisualStyleBackColor = true;
+            this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Image = global::Bubble_Information_System.Properties.Resources.reload_webpage_icon_icons_com_53905;
+            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizar.Location = new System.Drawing.Point(6, 176);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(161, 47);
+            this.btnActualizar.TabIndex = 9;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Image = global::Bubble_Information_System.Properties.Resources.search_1196411;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(605, 19);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(135, 47);
+            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // dataGridViewClientes
+            // 
+            this.dataGridViewClientes.AllowUserToAddRows = false;
+            this.dataGridViewClientes.AllowUserToDeleteRows = false;
+            this.dataGridViewClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewClientes.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewClientes.Location = new System.Drawing.Point(173, 82);
+            this.dataGridViewClientes.Name = "dataGridViewClientes";
+            this.dataGridViewClientes.ReadOnly = true;
+            this.dataGridViewClientes.Size = new System.Drawing.Size(549, 151);
+            this.dataGridViewClientes.TabIndex = 29;
+            this.dataGridViewClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClientes_CellContentClick);
+            // 
+            // rdbOff
+            // 
+            this.rdbOff.AutoSize = true;
+            this.rdbOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbOff.Location = new System.Drawing.Point(436, 9);
+            this.rdbOff.Name = "rdbOff";
+            this.rdbOff.Size = new System.Drawing.Size(49, 24);
+            this.rdbOff.TabIndex = 28;
+            this.rdbOff.Text = "Off";
+            this.rdbOff.UseVisualStyleBackColor = true;
+            this.rdbOff.CheckedChanged += new System.EventHandler(this.rdbOff_CheckedChanged);
+            // 
+            // rdbOn
+            // 
+            this.rdbOn.AutoSize = true;
+            this.rdbOn.Checked = true;
+            this.rdbOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbOn.Location = new System.Drawing.Point(505, 9);
+            this.rdbOn.Name = "rdbOn";
+            this.rdbOn.Size = new System.Drawing.Size(48, 24);
+            this.rdbOn.TabIndex = 27;
+            this.rdbOn.TabStop = true;
+            this.rdbOn.Text = "On";
+            this.rdbOn.UseVisualStyleBackColor = true;
+            this.rdbOn.CheckedChanged += new System.EventHandler(this.rdbOn_CheckedChanged);
+            // 
+            // txtDinamica
+            // 
+            this.txtDinamica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDinamica.Location = new System.Drawing.Point(173, 39);
+            this.txtDinamica.Name = "txtDinamica";
+            this.txtDinamica.Size = new System.Drawing.Size(291, 26);
+            this.txtDinamica.TabIndex = 10;
+            this.txtDinamica.TextChanged += new System.EventHandler(this.txtDinamica_TextChanged);
             // 
             // txtNumCliente
             // 
@@ -122,15 +241,6 @@
             this.txtApellidoPaterno.Size = new System.Drawing.Size(124, 26);
             this.txtApellidoPaterno.TabIndex = 3;
             this.txtApellidoPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoPaterno_KeyPress);
-            // 
-            // txtDinamica
-            // 
-            this.txtDinamica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDinamica.Location = new System.Drawing.Point(173, 39);
-            this.txtDinamica.Name = "txtDinamica";
-            this.txtDinamica.Size = new System.Drawing.Size(291, 26);
-            this.txtDinamica.TabIndex = 10;
-            this.txtDinamica.TextChanged += new System.EventHandler(this.txtDinamica_TextChanged);
             // 
             // label1
             // 
@@ -193,103 +303,6 @@
             this.label5.Size = new System.Drawing.Size(65, 20);
             this.label5.TabIndex = 24;
             this.label5.Text = "Nombre";
-            // 
-            // rdbOn
-            // 
-            this.rdbOn.AutoSize = true;
-            this.rdbOn.Checked = true;
-            this.rdbOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbOn.Location = new System.Drawing.Point(505, 9);
-            this.rdbOn.Name = "rdbOn";
-            this.rdbOn.Size = new System.Drawing.Size(48, 24);
-            this.rdbOn.TabIndex = 27;
-            this.rdbOn.TabStop = true;
-            this.rdbOn.Text = "On";
-            this.rdbOn.UseVisualStyleBackColor = true;
-            this.rdbOn.CheckedChanged += new System.EventHandler(this.rdbOn_CheckedChanged);
-            // 
-            // rdbOff
-            // 
-            this.rdbOff.AutoSize = true;
-            this.rdbOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbOff.Location = new System.Drawing.Point(436, 9);
-            this.rdbOff.Name = "rdbOff";
-            this.rdbOff.Size = new System.Drawing.Size(49, 24);
-            this.rdbOff.TabIndex = 28;
-            this.rdbOff.Text = "Off";
-            this.rdbOff.UseVisualStyleBackColor = true;
-            this.rdbOff.CheckedChanged += new System.EventHandler(this.rdbOff_CheckedChanged);
-            // 
-            // dataGridViewClientes
-            // 
-            this.dataGridViewClientes.AllowUserToAddRows = false;
-            this.dataGridViewClientes.AllowUserToDeleteRows = false;
-            this.dataGridViewClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
-            this.dataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewClientes.DefaultCellStyle = dataGridViewCellStyle22;
-            this.dataGridViewClientes.Location = new System.Drawing.Point(173, 82);
-            this.dataGridViewClientes.Name = "dataGridViewClientes";
-            this.dataGridViewClientes.ReadOnly = true;
-            this.dataGridViewClientes.Size = new System.Drawing.Size(549, 151);
-            this.dataGridViewClientes.TabIndex = 29;
-            this.dataGridViewClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClientes_CellContentClick);
-            // 
-            // btnDeshabilitar
-            // 
-            this.btnDeshabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeshabilitar.Image = global::Bubble_Information_System.Properties.Resources.remove_circle_1_icon_icons_com_48486;
-            this.btnDeshabilitar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeshabilitar.Location = new System.Drawing.Point(6, 100);
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(161, 47);
-            this.btnDeshabilitar.TabIndex = 8;
-            this.btnDeshabilitar.Text = "Deshabilitar";
-            this.btnDeshabilitar.UseVisualStyleBackColor = true;
-            this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Image = global::Bubble_Information_System.Properties.Resources.reload_webpage_icon_icons_com_53905;
-            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(6, 176);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(161, 47);
-            this.btnActualizar.TabIndex = 9;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // cmbFiltro
-            // 
-            this.cmbFiltro.BackColor = System.Drawing.Color.Honeydew;
-            this.cmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFiltro.FormattingEnabled = true;
-            this.cmbFiltro.Items.AddRange(new object[] {
-            "numCliente",
-            "nombre",
-            "apellidoPaterno",
-            "apellidoMaterno"});
-            this.cmbFiltro.Location = new System.Drawing.Point(18, 39);
-            this.cmbFiltro.Name = "cmbFiltro";
-            this.cmbFiltro.Size = new System.Drawing.Size(135, 28);
-            this.cmbFiltro.TabIndex = 10;
             // 
             // label6
             // 
@@ -361,19 +374,6 @@
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Image = global::Bubble_Information_System.Properties.Resources.search_1196411;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(605, 19);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(135, 47);
-            this.btnBuscar.TabIndex = 7;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnLogo
             // 
