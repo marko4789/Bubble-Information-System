@@ -167,6 +167,7 @@
   <ItemGroup>
     <Content Include="Imágenes\Adeudos.png" />
     <Content Include="Imágenes\Administrador.png" />
+    <Content Include="Resources\icons8-búsqueda-33 %281%29.png" />
     <None Include="Resources\search_119641.ico" />
     <None Include="Resources\icons8-añadir-481.png" />
     <None Include="Resources\icons8-añadir-333.png" />

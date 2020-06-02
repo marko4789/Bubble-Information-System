@@ -309,37 +309,42 @@ namespace Bubble_Information_System
         }
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            String consulta = "UPDATE empleados SET nombre='" + this.textNombre.Text + "',apellidoPaterno='" + this.textApeP.Text + "',apellidoMaterno='" + this.textApeM.Text + "',telefono='" + this.textTelefono.Text + "',direccion='" + this.textDir.Text + "' WHERE numEmpleado ='" + this.dataGridView1.Rows[selectedRow].Cells[0].Value.ToString() + "';";
-            MySqlConnection conexion = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=;");
-            MySqlCommand actualizar = new MySqlCommand(consulta, conexion);
-            MySqlDataReader leer;
-            try
+            if (textNombre.Text.Trim() != string.Empty && Regex.IsMatch(textNombre.Text, "^[A-Z a-z]*$") && textApeP.Text.Trim() != string.Empty && textApeP.Text.All(Char.IsLetter) && textApeM.Text.Trim() != string.Empty && textApeM.Text.All(Char.IsLetter) && textTelefono.Text.Trim() != string.Empty && textTelefono.Text.All(Char.IsNumber) && textDir.Text.Trim() != string.Empty)
             {
-                conexion.Open();
-                leer = actualizar.ExecuteReader();
-                MessageBox.Show("Guardado");
-
-
-
-
-                while (leer.Read())
+                String consulta = "UPDATE empleados SET nombre='" + this.textNombre.Text + "',apellidoPaterno='" + this.textApeP.Text + "',apellidoMaterno='" + this.textApeM.Text + "',telefono='" + this.textTelefono.Text + "',direccion='" + this.textDir.Text + "' WHERE numEmpleado ='" + this.dataGridView1.Rows[selectedRow].Cells[0].Value.ToString() + "';";
+                MySqlConnection conexion = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=;");
+                MySqlCommand actualizar = new MySqlCommand(consulta, conexion);
+                MySqlDataReader leer;
+                try
                 {
+                    conexion.Open();
+                    leer = actualizar.ExecuteReader();
+                    MessageBox.Show("Guardado");
 
+
+
+
+                    while (leer.Read())
+                    {
+
+                    }
+                    leer.Close();
+                    string filtrar = "select * from empleados where status=0";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(filtrar, conexion);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    dataGridView1.DataSource = table;
                 }
-                leer.Close();
-                string filtrar = "select * from empleados where status=0";
-                MySqlDataAdapter adapter = new MySqlDataAdapter(filtrar, conexion);
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                dataGridView1.DataSource = table;
-            }
 
-            catch (Exception ex)
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Uno o mas datos es incorrecto");
             }
-
-
         }
 
         private void btn_deshabilitar_Click(object sender, EventArgs e)

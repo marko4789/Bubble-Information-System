@@ -102,6 +102,7 @@
             this.txtRecibido.Name = "txtRecibido";
             this.txtRecibido.Size = new System.Drawing.Size(82, 20);
             this.txtRecibido.TabIndex = 11;
+            this.txtRecibido.TextChanged += new System.EventHandler(this.txtRecibido_TextChanged);
             // 
             // label5
             // 
@@ -160,6 +161,7 @@
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(81, 20);
             this.txtImporte.TabIndex = 17;
+            this.txtImporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImporte_KeyPress);
             // 
             // txtCambio
             // 
@@ -171,6 +173,7 @@
             // 
             // btnCambio
             // 
+            this.btnCambio.Enabled = false;
             this.btnCambio.Location = new System.Drawing.Point(19, 217);
             this.btnCambio.Name = "btnCambio";
             this.btnCambio.Size = new System.Drawing.Size(126, 22);
@@ -182,6 +185,7 @@
             // 
             // btnPagar
             // 
+            this.btnPagar.Enabled = false;
             this.btnPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPagar.Location = new System.Drawing.Point(62, 254);
             this.btnPagar.Name = "btnPagar";
@@ -189,6 +193,7 @@
             this.btnPagar.TabIndex = 20;
             this.btnPagar.Text = "    Pagar venta";
             this.btnPagar.UseVisualStyleBackColor = true;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // groupBox1
             // 
@@ -231,6 +236,7 @@
             this.button3.Text = "    Volver a ventas";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox2
             // 
@@ -278,6 +284,7 @@
             // 
             this.dgvVentas.AllowUserToAddRows = false;
             this.dgvVentas.AllowUserToDeleteRows = false;
+            this.dgvVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Location = new System.Drawing.Point(23, 66);
             this.dgvVentas.Name = "dgvVentas";

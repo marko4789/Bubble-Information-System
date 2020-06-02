@@ -90,13 +90,13 @@ namespace Bubble_Information_System
 
         private void btn_Adeudos_Click(object sender, EventArgs e)
         {
-            using (frmAdeudos ventanaAdeudos = new frmAdeudos())
+            using (frmAdeudos ventanaAdeudos = new frmAdeudos(this.numEmpleado))
                 ventanaAdeudos.ShowDialog();
         }
 
         private void adeudosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (frmAdeudos ventanaAdeudos = new frmAdeudos())
+            using (frmAdeudos ventanaAdeudos = new frmAdeudos(this.numEmpleado))
                 ventanaAdeudos.ShowDialog();
         }
     }
