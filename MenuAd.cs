@@ -106,5 +106,11 @@ namespace Bubble_Information_System
             using (frmAdeudos ventanaAdeudos = new frmAdeudos(this.numEmpleado))
                 ventanaAdeudos.ShowDialog();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Usuarios ventanaUsuarios = new Usuarios())
+                ventanaUsuarios.ShowDialog();
+        }
     }
 }

@@ -86,6 +86,12 @@
     <Compile Include="frmServicios.Designer.cs">
       <DependentUpon>frmServicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmServicios.resx">
       <DependentUpon>frmServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
@@ -167,6 +176,9 @@
   <ItemGroup>
     <Content Include="Imágenes\Adeudos.png" />
     <Content Include="Imágenes\Administrador.png" />
+    <None Include="Resources\actualizar1.png" />
+    <None Include="Resources\Añadir.png" />
+    <None Include="Resources\eliminar1.png" />
     <Content Include="Resources\icons8-búsqueda-33 %281%29.png" />
     <None Include="Resources\search_119641.ico" />
     <None Include="Resources\icons8-añadir-481.png" />
