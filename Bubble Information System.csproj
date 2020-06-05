@@ -74,6 +74,12 @@
     <Compile Include="frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCorteCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCorteCaja.Designer.cs">
+      <DependentUpon>frmCorteCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCorteCaja.resx">
+      <DependentUpon>frmCorteCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
@@ -179,6 +188,7 @@
     <None Include="Resources\actualizar1.png" />
     <None Include="Resources\Añadir.png" />
     <None Include="Resources\eliminar1.png" />
+    <None Include="Imágenes\Anterior.png" />
     <Content Include="Resources\icons8-búsqueda-33 %281%29.png" />
     <None Include="Resources\search_119641.ico" />
     <None Include="Resources\icons8-añadir-481.png" />

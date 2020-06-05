@@ -54,3 +54,4 @@ C:\Users\marko\source\repos\j+\obj\Debug\Bubble Information System.csproj.Genera
 C:\Users\marko\source\repos\j+\obj\Debug\Bubble Information System.csproj.CopyComplete
 C:\Users\marko\source\repos\j+\obj\Debug\Bubble Information System.exe
 C:\Users\marko\source\repos\j+\obj\Debug\Bubble Information System.pdb
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.Usuarios.resources

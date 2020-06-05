@@ -356,7 +356,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbTipoUs);
             this.Name = "Usuarios";
-            this.Text = "Bubble_Information_System";
+            this.Text = "Bubble Information System";
             this.Load += new System.EventHandler(this.Usuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
