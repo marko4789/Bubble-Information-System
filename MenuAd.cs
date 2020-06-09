@@ -39,7 +39,7 @@ namespace Bubble_Information_System
         private void btn_Venta_Click(object sender, EventArgs e)
         {
             using (frmVentas ventanaVentas = new frmVentas(this.numEmpleado))
-                ventanaVentas.ShowDialog();
+                ventanaVentas.Show();
         }
 
         private void MenuAd_Load(object sender, EventArgs e)
@@ -111,6 +111,18 @@ namespace Bubble_Information_System
         {
             using (Usuarios ventanaUsuarios = new Usuarios())
                 ventanaUsuarios.ShowDialog();
+        }
+
+        private void corteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (frmCorteCaja ventanaCorteCaja = new frmCorteCaja())
+                ventanaCorteCaja.ShowDialog();
+        }
+
+        private void btn_Corte_Click(object sender, EventArgs e)
+        {
+            using (frmCorteCaja ventanaCorteCaja = new frmCorteCaja())
+                ventanaCorteCaja.ShowDialog();
         }
     }
 }

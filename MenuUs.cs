@@ -99,5 +99,17 @@ namespace Bubble_Information_System
             using (frmAdeudos ventanaAdeudos = new frmAdeudos(this.numEmpleado))
                 ventanaAdeudos.ShowDialog();
         }
+
+        private void corteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (frmCorteCaja ventanaCorteCaja = new frmCorteCaja())
+                ventanaCorteCaja.ShowDialog();
+        }
+
+        private void btn_Corte_Click(object sender, EventArgs e)
+        {
+            using (frmCorteCaja ventanaCorteCaja = new frmCorteCaja())
+                ventanaCorteCaja.ShowDialog();
+        }
     }
 }

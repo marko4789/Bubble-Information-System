@@ -227,6 +227,7 @@ namespace Bubble_Information_System
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+            this.Hide();
             using (frmVentas ventanaVentas = new frmVentas(this.Empleado))
                 ventanaVentas.ShowDialog();
         }

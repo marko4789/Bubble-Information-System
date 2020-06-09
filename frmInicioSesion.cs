@@ -77,12 +77,14 @@ namespace Bubble_Information_System
                     if (dt.Rows[0][1].ToString() == "Administrador")
                     {
                         MenuAd meA = new MenuAd(Convert.ToInt32(dt.Rows[0][2]));
-                        meA.Show();
+                        meA.ShowDialog();
+                        this.Close();
                     }
                     else if (dt.Rows[0][1].ToString() == "Usuario")
                     {
                         MenuUs meU = new MenuUs(Convert.ToInt32(dt.Rows[0][2]));
-                        meU.Show();
+                        meU.ShowDialog();
+                        this.Close();
                     }
                 }
                 else

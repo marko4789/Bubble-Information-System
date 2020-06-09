@@ -55,3 +55,4 @@ C:\Users\marko\source\repos\j+\obj\Debug\Bubble Information System.csproj.CopyCo
 C:\Users\marko\source\repos\j+\obj\Debug\Bubble Information System.exe
 C:\Users\marko\source\repos\j+\obj\Debug\Bubble Information System.pdb
 C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.Usuarios.resources
+C:\Users\marko\source\repos\Bubble-Information-System\obj\Debug\Bubble_Information_System.frmCorteCaja.resources

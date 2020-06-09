@@ -131,6 +131,7 @@
             this.corteToolStripMenuItem.Name = "corteToolStripMenuItem";
             this.corteToolStripMenuItem.Size = new System.Drawing.Size(88, 22);
             this.corteToolStripMenuItem.Text = "Corte de caja";
+            this.corteToolStripMenuItem.Click += new System.EventHandler(this.corteToolStripMenuItem_Click);
             // 
             // pictureBox2
             // 
@@ -165,6 +166,7 @@
             this.btn_Corte.Text = "Corte de Caja";
             this.btn_Corte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Corte.UseVisualStyleBackColor = true;
+            this.btn_Corte.Click += new System.EventHandler(this.btn_Corte_Click);
             // 
             // btn_Adeudos
             // 

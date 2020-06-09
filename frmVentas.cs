@@ -593,8 +593,10 @@ namespace Bubble_Information_System
         private void btnAdeudos_Click(object sender, EventArgs e)
         {
             this.Close();
+            this.Hide();
             using (frmAdeudos ventanaAdeudos = new frmAdeudos(txtFolio.Text, this.numEmpleado))
                 ventanaAdeudos.ShowDialog();
+            
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
