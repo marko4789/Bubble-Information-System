@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using MySql.Data.Types;
+using CrystalDecisions;
 
 namespace Bubble_Information_System
 {
@@ -18,6 +19,8 @@ namespace Bubble_Information_System
         DataSet dtVentas;
         DataSet dtEnDeuda;
         DataSet dtSinDeuda;
+        DataTable Status;
+        DataTable Etc;
         MySqlConnection conexionBD = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=; Convert Zero Datetime=True; Allow Zero Datetime=True");
         public frmCorteCaja()
         {
@@ -43,14 +46,12 @@ namespace Bubble_Information_System
             dtSinDeuda = new DataSet();
             String llenarEnDeuda;
             String llenarSinDeuda;
-            String Completo = "SELECT empleados.nombre, numVentaServicio, fecha, importe, ventaservicio.status FROM (ventaservicio INNER JOIN (usuario INNER JOIN empleados ON usuario.numEmpleado = empleados.numEmpleado) ON usuario.numUsuario = ventaservicio.numUsuario) WHERE fecha BETWEEN '" + dtpFechaInicial.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFechaFinal.Value.ToString("yyyy-MM-dd") + "';";
+            String Completo = "SELECT empleados.nombre, empleados.apellidoPaterno, numVentaServicio, fecha, importe, ventaservicio.status FROM (ventaservicio INNER JOIN (usuario INNER JOIN empleados ON usuario.numEmpleado = empleados.numEmpleado) ON usuario.numUsuario = ventaservicio.numUsuario) WHERE fecha BETWEEN '" + dtpFechaInicial.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFechaFinal.Value.ToString("yyyy-MM-dd") + "';";
 
-            llenarEnDeuda = "SELECT empleados.nombre, numVentaServicio, fecha, importe, ventaservicio.status FROM (ventaservicio INNER JOIN (usuario INNER JOIN empleados ON usuario.numEmpleado = empleados.numEmpleado) ON usuario.numUsuario = ventaservicio.numUsuario) WHERE ventaservicio.status = 1 AND fecha BETWEEN '" + dtpFechaInicial.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFechaFinal.Value.ToString("yyyy-MM-dd") + "';";
+            llenarEnDeuda = "SELECT empleados.nombre, empleados.apellidoPaterno, numVentaServicio, fecha, importe, ventaservicio.status FROM (ventaservicio INNER JOIN (usuario INNER JOIN empleados ON usuario.numEmpleado = empleados.numEmpleado) ON usuario.numUsuario = ventaservicio.numUsuario) WHERE ventaservicio.status = 1 AND fecha BETWEEN '" + dtpFechaInicial.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFechaFinal.Value.ToString("yyyy-MM-dd") + "';";
             
-            llenarSinDeuda = "SELECT empleados.nombre, numVentaServicio, fecha, importe, ventaservicio.status FROM (ventaservicio INNER JOIN (usuario INNER JOIN empleados ON usuario.numEmpleado = empleados.numEmpleado) ON usuario.numUsuario = ventaservicio.numUsuario) WHERE ventaservicio.status = 0 AND fecha BETWEEN '" + dtpFechaInicial.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFechaFinal.Value.ToString("yyyy-MM-dd") + "';";
+            llenarSinDeuda = "SELECT empleados.nombre, empleados.apellidoPaterno, numVentaServicio, fecha, importe, ventaservicio.status FROM (ventaservicio INNER JOIN (usuario INNER JOIN empleados ON usuario.numEmpleado = empleados.numEmpleado) ON usuario.numUsuario = ventaservicio.numUsuario) WHERE ventaservicio.status = 0 AND fecha BETWEEN '" + dtpFechaInicial.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFechaFinal.Value.ToString("yyyy-MM-dd") + "';";
             
-            txtTest.Text = dtpFechaFinal.Value.ToString("yyyy-MM-dd");
-
             try
             {
                 adapter = new MySqlDataAdapter(llenarEnDeuda, conexionBD);
@@ -59,7 +60,6 @@ namespace Bubble_Information_System
                 adapter.Fill(dtSinDeuda, "ventaservicio");
                 adapter = new MySqlDataAdapter(Completo, conexionBD);
                 adapter.Fill(dtVentas, "ventaservicio");
-
                 if (this.status == true)
                 {
                     dgvVentas.DataSource = dtEnDeuda;
@@ -78,6 +78,8 @@ namespace Bubble_Information_System
             }
         }
 
+        
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (DateTime.Compare(dtpFechaInicial.Value, dtpFechaFinal.Value) <= 0 ||
@@ -90,6 +92,18 @@ namespace Bubble_Information_System
                 txtTotalPagadas.Text = suma(dtSinDeuda.Tables[0]).ToString("#,#.00");
                 txtTotalDeuda.Text = suma(dtEnDeuda.Tables[0]).ToString("#,#.00");
                 txtTotalNeto.Text = suma(dtVentas.Tables[0]).ToString("#,#.00");
+
+                statusAPalabra(dtVentas.Tables[0]);
+
+                this.Etc = new DataTable();
+                this.Etc.Columns.Add("fechaInicial", typeof(DateTime));
+                this.Etc.Columns.Add("fechaFinal", typeof(DateTime));
+                this.Etc.Columns.Add("ventasPagadas", typeof(int));
+                this.Etc.Columns.Add("ventasSinPagar", typeof(int));
+                this.Etc.Columns.Add("ventasTotales", typeof(int));
+                this.Etc.Columns.Add("total", typeof(double));
+
+                this.Etc.Rows.Add(dtpFechaInicial.Value, dtpFechaFinal.Value, this.dtSinDeuda.Tables[0].Rows.Count, this.dtEnDeuda.Tables[0].Rows.Count, this.dtVentas.Tables[0].Rows.Count, suma(dtVentas.Tables[0]));
 
                 btnImprimir.Enabled = true;
             }
@@ -105,10 +119,30 @@ namespace Bubble_Information_System
 
             for(int i = 0; i < tabla.Rows.Count ; i++)
             {
-                resultado = resultado + Convert.ToDouble(tabla.Rows[i][3]);
+                resultado = resultado + Convert.ToDouble(tabla.Rows[i][4]);
             }
 
             return resultado;
+        }
+
+        void statusAPalabra(DataTable tabla)
+        {
+
+            this.Status = new DataTable();
+            this.Status.Columns.Add("status", typeof(string));
+
+            for (int i = 0; i < tabla.Rows.Count; i++)
+            {
+                if(Convert.ToInt32(tabla.Rows[i][5]) == 0)
+                {
+                    this.Status.Rows.Add("Pagado");
+                }
+                else
+                {
+                    this.Status.Rows.Add("Sin pagar");
+                }
+            }
+
         }
 
         private void rbtEnDeuda_CheckedChanged(object sender, EventArgs e)
@@ -127,5 +161,18 @@ namespace Bubble_Information_System
         {
             this.Close();
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Reporte_CorteCaja reporte = new Reporte_CorteCaja();
+
+            reporte.Database.Tables["ventaservicio"].SetDataSource(this.dtVentas.Tables[0]);
+            reporte.Database.Tables["Status"].SetDataSource(this.Status);
+            reporte.Database.Tables["Etc"].SetDataSource(this.Etc);
+
+            reporte.PrintToPrinter(1, false, 0, 0);
+        }
+
+        
     }
 }

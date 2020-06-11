@@ -61,7 +61,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.dtpFechaInicial = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaFinal = new System.Windows.Forms.DateTimePicker();
-            this.txtTest = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -332,6 +331,7 @@
             this.btnImprimir.Text = "Imprimir Corte de Caja";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnCancelar
             // 
@@ -415,19 +415,11 @@
             this.dtpFechaFinal.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaFinal.TabIndex = 1;
             // 
-            // txtTest
-            // 
-            this.txtTest.Location = new System.Drawing.Point(396, 63);
-            this.txtTest.Name = "txtTest";
-            this.txtTest.Size = new System.Drawing.Size(220, 20);
-            this.txtTest.TabIndex = 60;
-            // 
             // frmCorteCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 511);
-            this.Controls.Add(this.txtTest);
             this.Controls.Add(this.dtpFechaFinal);
             this.Controls.Add(this.dtpFechaInicial);
             this.Controls.Add(this.pictureBox5);
@@ -496,6 +488,5 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.DateTimePicker dtpFechaInicial;
         private System.Windows.Forms.DateTimePicker dtpFechaFinal;
-        private System.Windows.Forms.TextBox txtTest;
     }
 }
