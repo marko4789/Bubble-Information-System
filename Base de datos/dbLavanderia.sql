@@ -73,7 +73,7 @@ CREATE TABLE `empleados` (
 
 /*Data for the table `empleados` */
 
-INSERT  INTO `empleados`(`numEmpleado`,`nombre`,`apellidoPaterno`, `apellidoMaterno`,`telefono`,`direccion`, `status`) VALUES (1,'Juana Lacu','Bana', 'Carrillo','9852710','Av. Insurgentes #563', 1),(2,'José María','Montemayor', 'Amaya','6697135790','Cid Marina #622', 1),(3,'Liliana Anel','Ortega', 'Valenzuela','6691082977','Av. Rafael Buelna #49', 1),(4,'Dimitrio Jassiel','Montemayor', 'Amaya','6691087636','Pradera Dorada #321', 1),(5,'Diana Paola','Lascurain', 'Vizcarra','6697196361','Calle Simon Bolivar #622', 1);
+INSERT  INTO `empleados`(`numEmpleado`,`nombre`,`apellidoPaterno`, `apellidoMaterno`,`telefono`,`direccion`, `status`) VALUES (1,'Juana Lacu','Bana', 'Carrillo','9852710','Av. Insurgentes #563', 0),(2,'José María','Montemayor', 'Amaya','6697135790','Cid Marina #622', 0),(3,'Liliana Anel','Ortega', 'Valenzuela','6691082977','Av. Rafael Buelna #49', 0),(4,'Dimitrio Jassiel','Montemayor', 'Amaya','6691087636','Pradera Dorada #321', 0),(5,'Diana Paola','Lascurain', 'Vizcarra','6697196361','Calle Simon Bolivar #622', 0);
 
 /*Table structure for table `servicios` */
 
@@ -90,7 +90,7 @@ CREATE TABLE `servicios` (
 
 /*Data for the table `servicios` */
 
-INSERT  INTO `servicios` (`numServicio`, `nombre`, `formaCobro`, `precio`, `status`) VALUES (1, 'Lavado', 'Pz', 12, 1);
+INSERT  INTO `servicios` (`numServicio`, `nombre`, `formaCobro`, `precio`, `status`) VALUES (1, 'Lavado', 'Kilogramo', 12, 1), (2, 'Planchado', 'Pieza', 7, 1);
 
 /*Table structure for table `usuario` */
 
