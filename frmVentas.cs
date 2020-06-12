@@ -346,7 +346,14 @@ namespace Bubble_Information_System
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumerosDecimales(e);
+            if (txtCantidadU.Text.Equals("Pz"))
+            {
+                SoloNumeros(e);
+            }
+            else
+            {
+                NumerosDecimales(e);
+            }
         }
 
         public static void NumerosDecimales(KeyPressEventArgs v)
@@ -373,6 +380,27 @@ namespace Bubble_Information_System
                 MessageBox.Show("Sólo números o números con punto decimal", "Bubble Information System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }//fin soloNumerosDecimales
+
+        public static void SoloNumeros(KeyPressEventArgs v)
+        {
+            if (Char.IsDigit(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (Char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (Char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+                MessageBox.Show("Sólo números enteros", "Bubble Information System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }//fin soloNumeros
 
         private void btnFinalizarVenta_Click(object sender, EventArgs e)
         {
@@ -416,6 +444,7 @@ namespace Bubble_Information_System
                     this.FINALIZADO = true;
                     btnImprimir.Enabled = true;
                     btnAdeudos.Enabled = true;
+                    btnCancelar.Enabled = false;
                     pictureBox4.BackColor = Color.FromArgb(225, 225, 225);
                 }
 
@@ -425,7 +454,6 @@ namespace Bubble_Information_System
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            cancelar();
         }
 
         void cancelar()
@@ -450,15 +478,13 @@ namespace Bubble_Information_System
             {
                 conexionBD.Close();
             }
-
-            this.Close();
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             linea.AppendLine("          LAS POMPAS DE JABON           ");
             linea.AppendLine("");
-            linea.AppendLine("CALLE MONTAÑA 320 ESQUINA CON AV.PRADOS");
+            linea.AppendLine("CALLE MONTANA 320 ESQUINA CON AV.PRADOS");
             linea.AppendLine("      DEL SOL.COL. PRADOS DEL SOL");
             linea.AppendLine("");
             linea.AppendLine("EXPEDIDO EN EL LOCAL PRINCIPAL");
@@ -490,7 +516,7 @@ namespace Bubble_Information_System
         {
             try
             {
-                String servicio = "", cantidad = "",  unidad = "", precio = "";
+                String servicio = "", cantidad = "",  unidad = "", precio = "", total = "";
                 DataTable DTCantidad = new DataTable();
                 DataTable DTServicio = new DataTable();
 
@@ -522,8 +548,9 @@ namespace Bubble_Information_System
                             }
                         }
                     }
+                    total = Convert.ToDouble(DTCantidad.Rows[i][1]).ToString("#,#.00");
 
-                    cantidad = DTCantidad.Rows[i][0].ToString() + " " + unidad + "  " + precio + " " + DTCantidad.Rows[i][1] + " ";
+                    cantidad = DTCantidad.Rows[i][0].ToString() + " " + unidad + "  " + precio + " " + total + " ";
 
                     TextoExtremos(servicio, cantidad);
 
@@ -648,6 +675,11 @@ namespace Bubble_Information_System
             {
                 cancelar();
             }
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         public void encabezado()

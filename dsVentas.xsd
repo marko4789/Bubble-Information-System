@@ -28,6 +28,8 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:string" minOccurs="0" />
+              <xs:element name="numVentaServicio" msprop:Generator_ColumnVarNameInTable="columnnumVentaServicio" msprop:Generator_ColumnPropNameInRow="numVentaServicio" msprop:Generator_ColumnPropNameInTable="numVentaServicioColumn" msprop:Generator_UserColumnName="numVentaServicio" type="xs:int" minOccurs="0" />
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -668,6 +668,10 @@ namespace Bubble_Information_System {
             
             private global::System.Data.DataColumn columnstatus;
             
+            private global::System.Data.DataColumn columnnumVentaServicio;
+            
+            private global::System.Data.DataColumn columnfecha;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public StatusDataTable() {
@@ -711,6 +715,22 @@ namespace Bubble_Information_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn numVentaServicioColumn {
+                get {
+                    return this.columnnumVentaServicio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn fechaColumn {
+                get {
+                    return this.columnfecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -746,10 +766,12 @@ namespace Bubble_Information_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StatusRow AddStatusRow(string status) {
+            public StatusRow AddStatusRow(string status, int numVentaServicio, string fecha) {
                 StatusRow rowStatusRow = ((StatusRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        status};
+                        status,
+                        numVentaServicio,
+                        fecha};
                 rowStatusRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStatusRow);
                 return rowStatusRow;
@@ -773,6 +795,8 @@ namespace Bubble_Information_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnstatus = base.Columns["status"];
+                this.columnnumVentaServicio = base.Columns["numVentaServicio"];
+                this.columnfecha = base.Columns["fecha"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -780,6 +804,10 @@ namespace Bubble_Information_System {
             private void InitClass() {
                 this.columnstatus = new global::System.Data.DataColumn("status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstatus);
+                this.columnnumVentaServicio = new global::System.Data.DataColumn("numVentaServicio", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnumVentaServicio);
+                this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1438,6 +1466,38 @@ namespace Bubble_Information_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int numVentaServicio {
+                get {
+                    try {
+                        return ((int)(this[this.tableStatus.numVentaServicioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'numVentaServicio\' de la tabla \'Status\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStatus.numVentaServicioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string fecha {
+                get {
+                    try {
+                        return ((string)(this[this.tableStatus.fechaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha\' de la tabla \'Status\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStatus.fechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsstatusNull() {
                 return this.IsNull(this.tableStatus.statusColumn);
             }
@@ -1446,6 +1506,30 @@ namespace Bubble_Information_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetstatusNull() {
                 this[this.tableStatus.statusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsnumVentaServicioNull() {
+                return this.IsNull(this.tableStatus.numVentaServicioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetnumVentaServicioNull() {
+                this[this.tableStatus.numVentaServicioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsfechaNull() {
+                return this.IsNull(this.tableStatus.fechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetfechaNull() {
+                this[this.tableStatus.fechaColumn] = global::System.Convert.DBNull;
             }
         }
         

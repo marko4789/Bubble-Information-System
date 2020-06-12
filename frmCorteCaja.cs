@@ -21,6 +21,7 @@ namespace Bubble_Information_System
         DataSet dtSinDeuda;
         DataTable Status;
         DataTable Etc;
+        Reporte_CorteCaja reporte;
         MySqlConnection conexionBD = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=; Convert Zero Datetime=True; Allow Zero Datetime=True");
         public frmCorteCaja()
         {
@@ -93,7 +94,7 @@ namespace Bubble_Information_System
                 txtTotalDeuda.Text = suma(dtEnDeuda.Tables[0]).ToString("#,#.00");
                 txtTotalNeto.Text = suma(dtVentas.Tables[0]).ToString("#,#.00");
 
-                statusAPalabra(dtVentas.Tables[0]);
+                llenarStatus(dtVentas.Tables[0]);
 
                 this.Etc = new DataTable();
                 this.Etc.Columns.Add("fechaInicial", typeof(DateTime));
@@ -125,21 +126,23 @@ namespace Bubble_Information_System
             return resultado;
         }
 
-        void statusAPalabra(DataTable tabla)
+        void llenarStatus(DataTable tabla)
         {
 
             this.Status = new DataTable();
             this.Status.Columns.Add("status", typeof(string));
+            this.Status.Columns.Add("numVentaServicio", typeof(int));
+            this.Status.Columns.Add("fecha", typeof(string));
 
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 if(Convert.ToInt32(tabla.Rows[i][5]) == 0)
                 {
-                    this.Status.Rows.Add("Pagado");
+                    this.Status.Rows.Add("Pagado", Convert.ToInt32(tabla.Rows[i][2]), Convert.ToDateTime(tabla.Rows[i][3]).ToString("yyyy-MM-dd"));
                 }
                 else
                 {
-                    this.Status.Rows.Add("Sin pagar");
+                    this.Status.Rows.Add("Sin pagar", Convert.ToInt32(tabla.Rows[i][2]), Convert.ToDateTime(tabla.Rows[i][3]).ToString("yyyy-MM-dd"));
                 }
             }
 
@@ -164,13 +167,13 @@ namespace Bubble_Information_System
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            Reporte_CorteCaja reporte = new Reporte_CorteCaja();
+            this.reporte = new Reporte_CorteCaja();
 
-            reporte.Database.Tables["ventaservicio"].SetDataSource(this.dtVentas.Tables[0]);
-            reporte.Database.Tables["Status"].SetDataSource(this.Status);
-            reporte.Database.Tables["Etc"].SetDataSource(this.Etc);
+            this.reporte.Database.Tables["ventaservicio"].SetDataSource(this.dtVentas.Tables[0]);
+            this.reporte.Database.Tables["Status"].SetDataSource(this.Status);
+            this.reporte.Database.Tables["Etc"].SetDataSource(this.Etc);
 
-            reporte.PrintToPrinter(1, false, 0, 0);
+            this.reporte.PrintToPrinter(1, false, 0, 0);
         }
 
         
