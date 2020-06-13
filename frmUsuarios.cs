@@ -57,44 +57,51 @@ namespace Bubble_Information_System
         {
             Boolean existe = Existe();
             Boolean existeDes = ExisteDes();
-
-            if (existe || existeDes)
+            if (!cmbEmple.Text.Equals("Empleado"))
             {
-                MessageBox.Show("El número de usuario ya existe", "Bubble Information System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }//fin existe
+                if (existe || existeDes)
+                {
+                    MessageBox.Show("El número de usuario ya existe", "Bubble Information System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }//fin existe
 
+                else
+                {
+                    if (txtbNumUs.Text != "" && txtbNomUs.Text != "" && cmbTipoUs.Text != "" && cmbEmple.Text != "" && txtbContra.Text != "")
+                    {
+                        String consulta = "INSERT INTO usuario (numUsuario, nombreUsuario, contraseña, tipoUsuario, status, numEmpleado) VALUES('" + this.txtbNumUs.Text + "','" + this.txtbNomUs.Text + "','" + this.txtbContra.Text + "','" + this.cmbTipoUs.Text + "','" + 0 + "','" + this.cmbEmple.SelectedValue + "'); ";
+                        MySqlConnection conexion = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=;");
+                        MySqlCommand agregar = new MySqlCommand(consulta, conexion);
+                        MySqlDataReader leer;
+                        try
+                        {
+                            conexion.Open();
+                            leer = agregar.ExecuteReader();
+                            MessageBox.Show("Guardado");
+                            while (leer.Read())
+                            {
+
+                            }
+                        }
+
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+
+
+                        llenarTabla();
+                        this.Refresh();
+                        MessageBox.Show("El registro ha sido agregado correctamente", "Bubble Information System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }//fin si campos están llenos
+                    else
+                        MessageBox.Show("Faltan campos por llenar", "Bubble Information System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }//fin si no existe
+            }
             else
             {
-                if (txtbNumUs.Text != "" && txtbNomUs.Text != "" && cmbTipoUs.Text != "" && cmbEmple.Text != "" && txtbContra.Text != "")
-                {
-                    String consulta = "INSERT INTO usuario (numUsuario, nombreUsuario, contraseña, tipoUsuario, status, numEmpleado) VALUES('" + this.txtbNumUs.Text + "','" + this.txtbNomUs.Text + "','" + this.txtbContra.Text + "','" + this.cmbTipoUs.Text + "','" + 0 + "','" + this.cmbEmple.SelectedValue + "'); ";
-                    MySqlConnection conexion = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=;");
-                    MySqlCommand agregar = new MySqlCommand(consulta, conexion);
-                    MySqlDataReader leer;
-                    try
-                    {
-                        conexion.Open();
-                        leer = agregar.ExecuteReader();
-                        MessageBox.Show("Guardado");
-                        while (leer.Read())
-                        {
-
-                        }
-                    }
-
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-
-
-                    llenarTabla();
-                    this.Refresh();
-                    MessageBox.Show("El registro ha sido agregado correctamente", "Bubble Information System", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }//fin si campos están llenos
-                else
-                    MessageBox.Show("Faltan campos por llenar", "Bubble Information System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }//fin si no existe
+                MessageBox.Show("Seleccione un empleado", "Bubble Information System");
+            }
+            
 
 
         }//fin agregar Usuarios
