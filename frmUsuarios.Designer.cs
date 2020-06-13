@@ -110,8 +110,9 @@
             // 
             this.txtbNumUs.Enabled = false;
             this.txtbNumUs.Location = new System.Drawing.Point(178, 97);
-            this.txtbNumUs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbNumUs.Margin = new System.Windows.Forms.Padding(4);
             this.txtbNumUs.Name = "txtbNumUs";
+            this.txtbNumUs.ReadOnly = true;
             this.txtbNumUs.Size = new System.Drawing.Size(43, 24);
             this.txtbNumUs.TabIndex = 5;
             this.txtbNumUs.TextChanged += new System.EventHandler(this.txtbNumUs_TextChanged);
@@ -120,10 +121,10 @@
             // txtbNomUs
             // 
             this.txtbNomUs.Location = new System.Drawing.Point(178, 133);
-            this.txtbNomUs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbNomUs.Margin = new System.Windows.Forms.Padding(4);
             this.txtbNomUs.Name = "txtbNomUs";
             this.txtbNomUs.Size = new System.Drawing.Size(115, 24);
-            this.txtbNomUs.TabIndex = 7;
+            this.txtbNomUs.TabIndex = 0;
             this.txtbNomUs.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.txtbNomUs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbNomUs_KeyPress);
             // 
@@ -153,25 +154,26 @@
             // txtbContra
             // 
             this.txtbContra.Location = new System.Drawing.Point(436, 131);
-            this.txtbContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtbContra.Name = "txtbContra";
             this.txtbContra.PasswordChar = '*';
             this.txtbContra.Size = new System.Drawing.Size(148, 24);
-            this.txtbContra.TabIndex = 11;
+            this.txtbContra.TabIndex = 3;
             this.txtbContra.TextChanged += new System.EventHandler(this.txtbContra_TextChanged);
             this.txtbContra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbContra_KeyPress);
             // 
             // cmbTipoUs
             // 
+            this.cmbTipoUs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoUs.FormattingEnabled = true;
             this.cmbTipoUs.Items.AddRange(new object[] {
             "Administrador",
             "Usuario"});
             this.cmbTipoUs.Location = new System.Drawing.Point(178, 171);
-            this.cmbTipoUs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipoUs.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipoUs.Name = "cmbTipoUs";
             this.cmbTipoUs.Size = new System.Drawing.Size(115, 26);
-            this.cmbTipoUs.TabIndex = 0;
+            this.cmbTipoUs.TabIndex = 1;
             this.cmbTipoUs.SelectedIndexChanged += new System.EventHandler(this.cmbTipoUs_SelectedIndexChanged);
             this.cmbTipoUs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTipoUs_KeyPress);
             // 
@@ -180,10 +182,10 @@
             this.cmbEmple.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmple.FormattingEnabled = true;
             this.cmbEmple.Location = new System.Drawing.Point(436, 93);
-            this.cmbEmple.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEmple.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEmple.Name = "cmbEmple";
             this.cmbEmple.Size = new System.Drawing.Size(180, 26);
-            this.cmbEmple.TabIndex = 10;
+            this.cmbEmple.TabIndex = 2;
             this.cmbEmple.SelectedIndexChanged += new System.EventHandler(this.cmbEmple_SelectedIndexChanged);
             this.cmbEmple.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbEmple_KeyPress);
             // 
@@ -191,7 +193,7 @@
             // 
             this.bttnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttnActualizar.Location = new System.Drawing.Point(25, 168);
-            this.bttnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bttnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.bttnActualizar.Name = "bttnActualizar";
             this.bttnActualizar.Size = new System.Drawing.Size(152, 43);
             this.bttnActualizar.TabIndex = 14;
@@ -220,7 +222,7 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(198, 78);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(511, 158);
             this.dataGridView1.TabIndex = 22;
@@ -232,10 +234,10 @@
             this.bttnBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttnBuscar.Location = new System.Drawing.Point(558, 18);
-            this.bttnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bttnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.bttnBuscar.Name = "bttnBuscar";
             this.bttnBuscar.Size = new System.Drawing.Size(151, 50);
-            this.bttnBuscar.TabIndex = 16;
+            this.bttnBuscar.TabIndex = 8;
             this.bttnBuscar.Text = "Buscar    ";
             this.bttnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bttnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -245,7 +247,7 @@
             // bttnDeshab
             // 
             this.bttnDeshab.Location = new System.Drawing.Point(24, 97);
-            this.bttnDeshab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bttnDeshab.Margin = new System.Windows.Forms.Padding(4);
             this.bttnDeshab.Name = "bttnDeshab";
             this.bttnDeshab.Size = new System.Drawing.Size(158, 48);
             this.bttnDeshab.TabIndex = 13;
@@ -259,7 +261,7 @@
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox4.Image = global::Bubble_Information_System.Properties.Resources.eliminar1;
             this.pictureBox4.Location = new System.Drawing.Point(133, 101);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(44, 40);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -271,7 +273,7 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox3.Image = global::Bubble_Information_System.Properties.Resources.actualizar1;
             this.pictureBox3.Location = new System.Drawing.Point(130, 172);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -282,7 +284,7 @@
             // 
             this.pictureBox1.Image = global::Bubble_Information_System.Properties.Resources.Buscar;
             this.pictureBox1.Location = new System.Drawing.Point(68, 36);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -297,10 +299,10 @@
             this.bttnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttnAgregar.Location = new System.Drawing.Point(567, 175);
-            this.bttnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bttnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.bttnAgregar.Name = "bttnAgregar";
             this.bttnAgregar.Size = new System.Drawing.Size(149, 58);
-            this.bttnAgregar.TabIndex = 15;
+            this.bttnAgregar.TabIndex = 4;
             this.bttnAgregar.Text = "Agregar   ";
             this.bttnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bttnAgregar.UseVisualStyleBackColor = false;
@@ -310,7 +312,7 @@
             // 
             this.Logo.Image = global::Bubble_Information_System.Properties.Resources.Logo;
             this.Logo.Location = new System.Drawing.Point(648, 16);
-            this.Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Logo.Margin = new System.Windows.Forms.Padding(4);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(81, 81);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -323,10 +325,10 @@
             this.rdbStatusUp.AutoSize = true;
             this.rdbStatusUp.Checked = true;
             this.rdbStatusUp.Location = new System.Drawing.Point(416, 36);
-            this.rdbStatusUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbStatusUp.Margin = new System.Windows.Forms.Padding(4);
             this.rdbStatusUp.Name = "rdbStatusUp";
             this.rdbStatusUp.Size = new System.Drawing.Size(46, 22);
-            this.rdbStatusUp.TabIndex = 28;
+            this.rdbStatusUp.TabIndex = 6;
             this.rdbStatusUp.TabStop = true;
             this.rdbStatusUp.Text = "On";
             this.rdbStatusUp.UseVisualStyleBackColor = true;
@@ -335,10 +337,10 @@
             // txtbusqueda
             // 
             this.txtbusqueda.Location = new System.Drawing.Point(100, 36);
-            this.txtbusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.txtbusqueda.Name = "txtbusqueda";
             this.txtbusqueda.Size = new System.Drawing.Size(271, 24);
-            this.txtbusqueda.TabIndex = 29;
+            this.txtbusqueda.TabIndex = 5;
             this.txtbusqueda.TextChanged += new System.EventHandler(this.txtbusqueda_TextChanged);
             this.txtbusqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbusqueda_KeyPress);
             // 
@@ -346,10 +348,10 @@
             // 
             this.rdbStatusDown.AutoSize = true;
             this.rdbStatusDown.Location = new System.Drawing.Point(480, 36);
-            this.rdbStatusDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbStatusDown.Margin = new System.Windows.Forms.Padding(4);
             this.rdbStatusDown.Name = "rdbStatusDown";
             this.rdbStatusDown.Size = new System.Drawing.Size(46, 22);
-            this.rdbStatusDown.TabIndex = 30;
+            this.rdbStatusDown.TabIndex = 7;
             this.rdbStatusDown.TabStop = true;
             this.rdbStatusDown.Text = "Off";
             this.rdbStatusDown.UseVisualStyleBackColor = true;
@@ -360,7 +362,7 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox2.Image = global::Bubble_Information_System.Properties.Resources.Buscar;
             this.pictureBox2.Location = new System.Drawing.Point(563, 24);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(39, 39);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -408,7 +410,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbTipoUs);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Usuarios";
             this.Text = "Bubble Information System";
             this.Load += new System.EventHandler(this.Usuarios_Load);

@@ -39,7 +39,7 @@ namespace Bubble_Information_System
         private void btn_Venta_Click(object sender, EventArgs e)
         {
             using (frmVentas ventanaVentas = new frmVentas(this.numEmpleado))
-                ventanaVentas.Show();
+                ventanaVentas.ShowDialog();
         }
 
         private void MenuAd_Load(object sender, EventArgs e)

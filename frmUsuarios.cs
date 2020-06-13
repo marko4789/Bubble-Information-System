@@ -76,7 +76,7 @@ namespace Bubble_Information_System
                         {
                             conexion.Open();
                             leer = agregar.ExecuteReader();
-                            MessageBox.Show("Guardado");
+                            MessageBox.Show("Guardado con exito", "Bubble Information System");
                             while (leer.Read())
                             {
 
