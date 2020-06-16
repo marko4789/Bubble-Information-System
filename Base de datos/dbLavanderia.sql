@@ -90,7 +90,7 @@ CREATE TABLE `servicios` (
 
 /*Data for the table `servicios` */
 
-INSERT  INTO `servicios` (`numServicio`, `nombre`, `formaCobro`, `precio`, `status`) VALUES (1, 'Lavado', 'Kilogramo', 12, 1), (2, 'Planchado', 'Pieza', 7, 1);
+INSERT  INTO `servicios` (`numServicio`, `nombre`, `formaCobro`, `precio`, `status`) VALUES (1, 'Lavado', 'Kilogramo', 12, 0), (2, 'Planchado', 'Pieza', 7, 0);
 
 /*Table structure for table `usuario` */
 
