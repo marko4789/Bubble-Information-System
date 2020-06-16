@@ -160,7 +160,7 @@ namespace Bubble_Information_System
         private void bttnBuscar_Click(object sender, EventArgs e)
         {
 
-            string buscar = "select * from usuario where status=0 and numEmpleado ='" + this.txtbusqueda.Text + "';";
+            string buscar = "select * from usuario where status=0 and numUsuario ='" + this.txtbusqueda.Text + "';";
             MySqlDataAdapter adapter = new MySqlDataAdapter(buscar, conexion);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -462,7 +462,7 @@ namespace Bubble_Information_System
 
         private void txtbusqueda_KeyPress(object sender, KeyPressEventArgs e)
         {
-            SoloNumeros(e);
+            //SoloNumeros(e);
         }//Validacion de busqueda
 
         private void rdbStatusDown_CheckedChanged(object sender, EventArgs e)
