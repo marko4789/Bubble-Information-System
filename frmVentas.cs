@@ -22,7 +22,7 @@ namespace Bubble_Information_System
         int idServicio;
         int numEmpleado;
         MySqlConnection conexionBD = new MySqlConnection("server=localhost; database=dblavanderia; uid=root; pdw=; Convert Zero Datetime=True; Allow Zero Datetime=True");
-        StringBuilder linea = new StringBuilder();
+        StringBuilder linea;
         int maxCar = 40, cortar;
         String Cliente;
         DateTime fecha;
@@ -482,6 +482,25 @@ namespace Bubble_Information_System
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            linea = new StringBuilder();
+            crearTicket();
+            linea.AppendLine("");
+            linea.AppendLine("");
+            crearTicket();
+            //Samsung M2070 Series
+
+            PrintDialog pd = new PrintDialog();
+            pd.PrinterSettings = new PrinterSettings();
+
+            if (DialogResult.OK == pd.ShowDialog(this))
+            {
+                RawPrinterHelper.SendStringToPrinter(pd.PrinterSettings.PrinterName, linea.ToString());
+            }
+            //RawPrinterHelper.SendStringToPrinter(linea.ToString()); //Imprime texto.
+
+        }
+        void crearTicket()
+        {
             linea.AppendLine("          LAS POMPAS DE JABON           ");
             linea.AppendLine("");
             linea.AppendLine("CALLE MONTANA 320 ESQUINA CON AV.PRADOS");
@@ -508,10 +527,8 @@ namespace Bubble_Information_System
             linea.AppendLine("     IMPORTE A PAGAR: $ " + txtImporte.Text);
             linea.AppendLine("");
             linea.AppendLine("     ¡GRACIAS POR SU COMPRA!");
-            RawPrinterHelper.SendStringToPrinter("Samsung M2070 Series", linea.ToString()); //Imprime texto.
 
         }
-
         public void AddServicios()
         {
             try
